@@ -9,6 +9,38 @@ remove_action('wp_head', 'wp_oembed_add_host_js');
 remove_action('wp_head', 'rest_output_link_wp_head');
 remove_action('wp_head', 'wp_generator');
 
+register_nav_menu('header', 'Le menu qui se trouve dans le header');
+register_nav_menu('footer', 'Le menu qui se trouve dans le footer');
+register_nav_menu('socials', 'Le menu qui regroupe mes réseaux sociaux');
+register_nav_menu('legal', 'Le menu qui contient le lien vers les mentions légales');
+
+function portfolio_get_navigation_links(string $menu_name): array
+{
+    $all_menus = get_nav_menu_locations();
+
+    if (!isset($all_menus[$menu_name])) {
+        return [];
+    }
+
+    $nav_id = $all_menus[$menu_name];
+
+    $items_menu = wp_get_nav_menu_items($nav_id);
+    $links = [];
+
+    foreach ($items_menu as $item) {
+        $link = new stdClass();
+        $link->href = $item->url;
+        $link->label = $item->title;
+        $link->title = $item->attr_title;
+
+        $links[] = $link;
+    }
+
+    return $links;
+}
+
+portfolio_get_navigation_links('header');
+
 function portfolio_asset(string $filename): string
 {
     $manifest_path = get_theme_file_path('public/.vite/manifest.json');
