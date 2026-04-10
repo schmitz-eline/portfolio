@@ -2,13 +2,6 @@
 
 include('core/theme/configuration.php');
 
-remove_action('wp_head', 'print_emoji_detection_script', 7);
-remove_action('wp_head', 'wp_print_comments');
-remove_action('wp_head', 'wp_oembed_add_discovery_links');
-remove_action('wp_head', 'wp_oembed_add_host_js');
-remove_action('wp_head', 'rest_output_link_wp_head');
-remove_action('wp_head', 'wp_generator');
-
 register_nav_menu('header', 'Le menu qui se trouve dans le header');
 register_nav_menu('footer', 'Le menu qui se trouve dans le footer');
 register_nav_menu('socials', 'Le menu qui regroupe mes réseaux sociaux');
@@ -58,4 +51,10 @@ function portfolio_asset(string $filename): string
     }
 
     return get_template_directory_uri() . '/public/' . $filename;
+}
+
+load_theme_textdomain('portfolio-trad', get_template_directory() . '/locales');
+function __portfolio(string $translation): ?string
+{
+    return __($translation, 'portfolio-trad');
 }

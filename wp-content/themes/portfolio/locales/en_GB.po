@@ -1,0 +1,50 @@
+# Copyright (C) 2026 Eline Schmitz
+# This file is distributed under the same license as the Portfolio theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/portfolio\n"
+"POT-Creation-Date: 2026-04-10 11:11+0200\n"
+"PO-Revision-Date: 2026-04-10 11:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+"X-Domain: portfolio-trad\n"
+"X-Poedit-KeywordsList: __portfolio;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: footer.php:26
+msgid "Me suivre"
+msgstr "My socials"
+
+#: footer.php:41
+msgid "© Eline Schmitz 2026. Tous droits réservés."
+msgstr "© Eline Schmitz 2026. All rights reserved."
+
+#: header.php:13
+msgid "Portfolio d’Eline Schmitz"
+msgstr "Eline Schmitz’s portfolio"
+
+#: header.php:21
+msgid "Menu de navigation"
+msgstr "Navigation Menu"
+
+#: header.php:23
+msgid "Vers la page d’accueil"
+msgstr "To the home page"
+
+#: header.php:40
+msgid "Traduire en Anglais"
+msgstr "Translate to French"
+
+#~ msgid "Eline Schmitz"
+#~ msgstr "Eline Schmitz"
+
+#~ msgid "Navigation"
+#~ msgstr "Navigation"
