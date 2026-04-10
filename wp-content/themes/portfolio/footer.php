@@ -14,7 +14,7 @@ $legal = portfolio_get_navigation_links('legal');
                 <ul class="footer__list" role="list">
                     <?php foreach ($footer as $link): ?>
                         <li class="footer__item">
-                            <a class="footer__link" href="<?= $link->href ?>" title="<?= $link->label ?>">
+                            <a class="footer__link" href="<?= $link->href ?>" title="<?= $link->title ?>">
                                 <?= $link->label ?>
                             </a>
                         </li>
@@ -23,11 +23,13 @@ $legal = portfolio_get_navigation_links('legal');
             </li>
 
             <li class="footer__nav-item">
-                <span class="footer__list-title">Me suivre</span>
+                <span class="footer__list-title"><?= __portfolio('Me suivre') ?></span>
                 <ul class="footer__socials" role="list">
                     <?php foreach ($socials as $link): ?>
                         <li class="footer__item">
-                            <a class="footer__link" href="<?= $link->href ?>"><?= $link->label ?></a>
+                            <a class="footer__link" href="<?= $link->href ?>" title="<?= $link->title ?>" target="_blank" rel="noopener noreferrer">
+                                <?= $link->label ?>
+                            </a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -35,9 +37,11 @@ $legal = portfolio_get_navigation_links('legal');
         </ul>
     </nav>
 
-    <div class="footer__bottom">
-        <p class="footer__copyright">© Eline Schmitz 2026. Tous droits réservés.</p>
-        <a class="footer__legal-link" href="<?= $legal[0]->href ?>"><?= $legal[0]->label ?></a>
+    <div class="footer__legal">
+        <p class="footer__copyright"><?= __portfolio('© Eline Schmitz 2026. Tous droits réservés.') ?></p>
+        <a class="footer__legal-link" href="<?= $legal[0]->href ?>" title="<?= $legal[0]->title ?>">
+            <?= $legal[0]->label ?>
+        </a>
     </div>
 </footer>
 
