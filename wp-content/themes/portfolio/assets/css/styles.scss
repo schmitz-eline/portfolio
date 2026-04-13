@@ -1,2 +1,12 @@
-@use 'general/reset.css';
+@use 'utils/reset.css';
+@use 'utils/sro';
+
+@use 'settings/colors';
+@use 'settings/fonts';
+@use 'settings/breakpoints';
+
 @use 'general/general';
+@use 'general/header';
+@use 'general/footer';
+
+@use 'components/action-buttons';

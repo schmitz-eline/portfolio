@@ -1,0 +1,150 @@
+@use '../settings/breakpoints';
+
+/* mobile first */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2rem 0;
+  padding: 1.2rem 2rem;
+  background-color: var(--beige);
+  border: 0.24rem solid var(--dark);
+  position: sticky;
+  top: 2rem;
+  z-index: 10;
+
+  &__home-link {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--burgundy);
+  }
+
+  &__nav-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--burgundy);
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__nav-list {
+    display: none;
+    position: fixed;
+    inset: 0;
+  }
+
+  &__nav-list--open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 14.8rem;
+    background: var(--burgundy);
+    z-index: 9999;
+  }
+
+  &__nav-list--open &__nav-item {
+    width: 18rem;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink);
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 3.4rem;
+    right: 4rem;
+  }
+
+  &__lang-link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--burgundy);
+  }
+}
+
+/* tablette */
+
+@include breakpoints.tablet {
+  .header {
+    &__nav-list {
+      display: flex;
+      position: relative;
+      gap: 2rem;
+    }
+
+    &__nav-link {
+      font-size: 1.6rem;
+      color: var(--burgundy);
+      text-transform: uppercase;
+    }
+
+    &__nav-link.active {
+      text-decoration: underline var(--burgundy) solid 0.3rem;
+      text-underline-offset: 30%;
+    }
+
+    &__nav-close,
+    &__burger,
+    &__close {
+      display: none;
+    }
+  }
+}
+
+/* desktop */
+
+@include breakpoints.desktop {
+  .header {
+    border-width: 0.36rem;
+
+    &__nav,
+    &__nav-list {
+      gap: 3.2rem;
+    }
+  }
+}
+
+/* animation des liens au hover et au focus */
+
+.header__nav-link,
+.header__home-link,
+.header__lang-link {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(var(--pink), var(--pink));
+  background-size: 0 50%;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color 0.3s ease-in-out, background-size 0.3s ease-in-out;
+}
+
+.header__home-link:hover,
+.header__home-link:focus-within,
+.header__nav-item:hover .header__nav-link,
+.header__nav-item:focus-within .header__nav-link,
+.header__lang-link:hover,
+.header__lang-link:focus-within {
+  background-size: 100% 50%;
+}

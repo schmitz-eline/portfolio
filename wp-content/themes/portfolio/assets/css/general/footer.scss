@@ -1,0 +1,122 @@
+@use '../settings/breakpoints';
+
+/* mobile first */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  &__nav {
+    display: flex;
+    background-color: var(--dark);
+  }
+
+  &__sections {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 4rem;
+    width: 30rem;
+    margin: 0 auto;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    &-title {
+      font-size: 1.6rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    &-link {
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--beige);
+    }
+  }
+
+  &__bottom {
+    background-color: var(--beige);
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.2rem 0;
+    }
+  }
+
+  &__copyright,
+  &__legal-link {
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  /* animation des liens au hover et au focus */
+
+  &__section-link,
+  &__legal-link {
+    position: relative;
+    display: inline-block;
+    background-size: 0 50%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out, background-size 0.3s ease-in-out;
+
+    &:hover, &:focus-within {
+      background-size: 100% 50%;
+    }
+  }
+
+  &__section-link {
+    background-image: linear-gradient(var(--burgundy), var(--burgundy));
+  }
+
+  &__legal-link {
+    background-image: linear-gradient(var(--pink), var(--pink));
+  }
+}
+
+/* tablette */
+
+@include breakpoints.tablet {
+  .footer {
+    &__sections {
+      max-width: 40rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__bottom-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 40rem;
+    }
+  }
+}
+
+/* desktop */
+
+@include breakpoints.desktop {
+  .footer {
+    &__sections,
+    &__bottom-wrapper {
+      max-width: 50rem;
+    }
+  }
+}
