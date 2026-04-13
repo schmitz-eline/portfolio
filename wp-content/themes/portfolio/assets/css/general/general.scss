@@ -1,11 +1,24 @@
-.sro {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+// Style principal
+
+:root {
+  font-size: 10px;
+}
+
+body * {
+  font-family: 'TT Commons Pro Trial', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--burgundy);
+  color: var(--beige);
+}
+
+main {
+  padding: 0 2rem;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
 }

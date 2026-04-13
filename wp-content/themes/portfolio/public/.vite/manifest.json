@@ -1,11 +1,27 @@
 {
   "wp-content/themes/portfolio/assets/css/styles.scss": {
-    "file": "assets/scss-Dsk7C_5E.css",
+    "file": "assets/scss-ZwCGsO61.css",
     "src": "wp-content/themes/portfolio/assets/css/styles.scss",
     "isEntry": true
   },
+  "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_DemiBold.ttf": {
+    "file": "assets/TT_Commons_Pro_Trial_DemiBold-DYsWNy7G.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_DemiBold.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_ExtraBlack.ttf": {
+    "file": "assets/TT_Commons_Pro_Trial_ExtraBlack-gg6hZJ8b.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_ExtraBlack.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_ExtraBold.ttf": {
+    "file": "assets/TT_Commons_Pro_Trial_ExtraBold-ByB10MNc.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_ExtraBold.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_Medium_Italic.ttf": {
+    "file": "assets/TT_Commons_Pro_Trial_Medium_Italic-C0zOohFY.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_Medium_Italic.ttf"
+  },
   "wp-content/themes/portfolio/assets/js/main.js": {
-    "file": "assets/js-CaRO5wFV.js",
+    "file": "assets/js-DfS5476X.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/assets/js/main.js",
     "isEntry": true
