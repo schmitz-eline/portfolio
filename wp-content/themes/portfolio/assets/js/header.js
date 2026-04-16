@@ -1,11 +1,20 @@
+import {
+    burgerButtonSelector,
+    closeButtonSelector,
+    navListSelector,
+    navItemSelector,
+    openClass,
+    actionClass
+} from "./settings";
+
 const header = {
     init() {
-        this.burgerButtonElement = document.querySelector(headerSettings.burgerButtonSelector);
-        this.closeButtonElement = document.querySelector(headerSettings.closeButtonSelector);
-        this.navListElement = document.querySelector(headerSettings.navListSelector);
-        this.navItemElements = document.querySelectorAll(headerSettings.navItemSelector);
-        this.openClass = headerSettings.openClass;
-        this.actionClass = headerSettings.actionClass;
+        this.burgerButtonElement = document.querySelector(burgerButtonSelector);
+        this.closeButtonElement = document.querySelector(closeButtonSelector);
+        this.navListElement = document.querySelector(navListSelector);
+        this.navItemElements = document.querySelectorAll(navItemSelector);
+        this.openClass = openClass;
+        this.actionClass = actionClass;
 
         this.openMenu();
         this.closeMenu();

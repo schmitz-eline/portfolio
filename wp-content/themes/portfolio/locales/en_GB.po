@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/portfolio\n"
-"POT-Creation-Date: 2026-04-13 23:12+0200\n"
-"PO-Revision-Date: 2026-04-13 23:16+0200\n"
+"POT-Creation-Date: 2026-04-14 21:07+0200\n"
+"PO-Revision-Date: 2026-04-14 21:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -19,6 +19,10 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
+#: footer.php:10
+msgid "Navigation du pied de page"
+msgstr "Footer navigation"
+
 #: footer.php:27
 msgid "Me suivre"
 msgstr "My socials"
@@ -26,6 +30,14 @@ msgstr "My socials"
 #: footer.php:43
 msgid "© Eline Schmitz 2026. Tous droits réservés."
 msgstr "© Eline Schmitz 2026. All rights reserved."
+
+#: front-page.php:31
+msgid "Mon univers"
+msgstr "My universe"
+
+#: front-page.php:41
+msgid "Me contacter"
+msgstr "Get in touch"
 
 #: header.php:14
 msgid "design web, développement web, brutalisme, minimalisme"
@@ -52,8 +64,8 @@ msgid "Ouvrir le menu"
 msgstr "Open the menu"
 
 #: header.php:44
-msgid "Menu de navigation"
-msgstr "Navigation Menu"
+msgid "Navigation de l’en-tête de page"
+msgstr "Header navigation"
 
 #: header.php:49
 msgid "Fermer le menu"
@@ -62,6 +74,27 @@ msgstr "Close the menu"
 #: header.php:77
 msgid "Traduire en Anglais"
 msgstr "Translate to French"
+
+#: templates/creations-card.php:27
+msgid "Voir la création : "
+msgstr "Take a look at the creation: "
+
+#: templates/creations-card.php:33
+msgid "Illustration de la création : "
+msgstr "Illustration of the creation: "
+
+#: templates/creations-card.php:49
+msgid "Plus de créations"
+msgstr "More creations"
+
+#~ msgid "Découvrir mon univers"
+#~ msgstr "Explore my universe"
+
+#~ msgid "Vers la page de contact"
+#~ msgstr "To the contact page"
+
+#~ msgid "Découvrir mes autres créations"
+#~ msgstr "Explore my other creations"
 
 #~ msgid "fr"
 #~ msgstr "en"

@@ -32,8 +32,6 @@ function portfolio_get_navigation_links(string $menu_name): array
     return $links;
 }
 
-portfolio_get_navigation_links('header');
-
 function portfolio_asset(string $filename): string
 {
     $manifest_path = get_theme_file_path('public/.vite/manifest.json');
@@ -58,3 +56,44 @@ function __portfolio(string $translation): ?string
 {
     return __($translation, 'portfolio-trad');
 }
+
+function eline_allow_svg_uploads($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+
+add_filter('upload_mimes', 'eline_allow_svg_uploads');
+
+register_post_type(
+    'creations',
+    [
+        'label' => 'Créations',
+        'description' => 'Les créations que j’ai réalisées',
+        'menu_position' => 20,
+        'menu_icon' => 'dashicons-edit',
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'creations'],
+        'supports' => [
+            'title'
+        ]
+    ]
+);
+
+register_taxonomy(
+    'creation_type',
+    [
+        'creations'
+    ],
+    [
+        'labels' => [
+            'name' => 'Types de créations',
+        ],
+        'description' => 'Types de créations',
+        'hierarchical' => false,
+        'show_ui' => true,
+        'show_admin_color' => true,
+        'query_var' => true,
+    ]
+);

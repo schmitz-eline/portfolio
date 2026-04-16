@@ -1,0 +1,21 @@
+.image-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--pink);
+  border: 0.24rem solid var(--dark);
+  border-radius: var(--img-border-radius);
+  box-shadow: var(--dark) var(--img-shadow) var(--img-shadow);
+  aspect-ratio: var(--img-ratio);
+  width: var(--img-size);
+  padding: var(--img-padding);
+}
+
+.image-container img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

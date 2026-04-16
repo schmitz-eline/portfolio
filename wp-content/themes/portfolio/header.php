@@ -4,7 +4,7 @@ $currentLanguage = pll_current_language();
 ?>
 
 <!doctype html>
-<html lang="<?= pll_current_language('locale') ?>">
+<html lang="<?= $currentLanguage ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -41,7 +41,7 @@ $currentLanguage = pll_current_language();
         </button>
 
         <nav class="header__nav" role="navigation" id="header-nav">
-            <h2 class="header__nav-title sro"><?= __portfolio('Menu de navigation') ?></h2>
+            <h2 class="header__nav-title sro"><?= __portfolio('Navigation de l’en-tête de page') ?></h2>
 
             <ul class="header__nav-list">
                 <li class="header__nav-close">

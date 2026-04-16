@@ -1,0 +1,107 @@
+@use '../../settings/variables/breakpoints';
+
+/* mobile first */
+
+.creations {
+  margin-top: 8rem;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 4rem 0;
+    display: flex;
+    gap: 4vw;
+
+    // scroller si l'écran est trop petit pour tout afficher :
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 3.2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink) transparent;
+    &::-webkit-scrollbar {
+      height: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--pink);
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    //
+  }
+
+  &__item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__item-image-container {
+    --img-border-radius: 0.8rem;
+    --img-shadow: 0.4rem;
+    --img-ratio: 1 / 1;
+    --img-size: 24vw;
+    --img-padding: 1.6rem;
+    min-width: 9.6rem;
+  }
+
+  &__item-name {
+    font-size: 1.4rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--beige);
+    max-width: 24vw; // même taille que image-container
+    min-width: 9.6rem; // même taille min. que image-container
+  }
+}
+
+/* tablette */
+
+@include breakpoints.tablet {
+  .creations {
+    &__list {
+      gap: 3.2rem;
+    }
+    
+    &__item-link {
+      gap: 2rem;
+    }
+
+    &__item-image-container {
+      --img-border-radius: 1.2rem;
+      --img-shadow: 0.6rem;
+      --img-padding: 2.4rem;
+    }
+
+    &__item-name {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/* desktop */
+
+@include breakpoints.desktop {
+  .creations {
+    &__list {
+      gap: 4rem;
+    }
+
+    &__item-link {
+      gap: 2.4rem;
+    }
+
+    &__item-image-container {
+      --img-border-radius: 1.6rem;
+      --img-shadow: 0.8rem;
+      --img-padding: 3.2rem;
+    }
+  }
+}

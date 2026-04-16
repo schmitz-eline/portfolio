@@ -1,5 +1,7 @@
 // Style principal
 
+@use '../settings/variables/breakpoints';
+
 :root {
   font-size: 10px;
 }
@@ -15,7 +17,12 @@ body {
 }
 
 main {
-  padding: 0 2rem;
+  padding: 8rem 2rem 10rem;
+
+  @include breakpoints.tablet {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 a {
