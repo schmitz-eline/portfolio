@@ -1,4 +1,4 @@
-@use '../settings/breakpoints';
+@use '../../settings/variables/breakpoints';
 
 /* mobile first */
 
@@ -17,6 +17,7 @@
   &__home-link {
     font-size: 1.6rem;
     font-weight: 800;
+    letter-spacing: 3%;
     text-transform: uppercase;
     color: var(--burgundy);
   }

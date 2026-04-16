@@ -1,12 +1,17 @@
-@use 'utils/reset.css';
-@use 'utils/sro';
+@use 'settings/reset.css';
+@use 'settings/sro';
 
-@use 'settings/colors';
-@use 'settings/fonts';
-@use 'settings/breakpoints';
+@use 'settings/variables/colors';
+@use 'settings/variables/fonts';
+@use 'settings/variables/breakpoints';
 
 @use 'general/general';
-@use 'general/header';
-@use 'general/footer';
 
-@use 'components/action-buttons';
+@use 'general/partials/header';
+@use 'general/partials/footer';
+
+@use 'general/components/action-buttons';
+@use 'general/components/image-container';
+
+@use 'general/content/hero';
+@use 'general/content/creations-card';

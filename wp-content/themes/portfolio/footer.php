@@ -7,7 +7,7 @@ $legal = portfolio_get_navigation_links('legal');
 </main>
 <footer class="footer">
     <nav class="footer__nav" aria-labelledby="footer-nav-title">
-        <h2 class="footer__title sro" id="footer-nav-title">Navigation</h2>
+        <h2 class="footer__title sro" id="footer-nav-title"><?= __portfolio('Navigation du pied de page') ?></h2>
 
         <ul class="footer__sections">
             <li class="footer__section">
