@@ -2,25 +2,27 @@
 
 /* mobile first */
 
-.creations {
+.creations-section {
   margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 
   &__title {
     font-size: 2rem;
-    font-weight: 950;
-    letter-spacing: 6%;
+    font-weight: 800;
+    letter-spacing: 3%;
     text-transform: uppercase;
   }
 
   &__list {
-    margin: 4rem 0;
     display: flex;
     gap: 4vw;
+    overflow: visible;
 
     // scroller si l'écran est trop petit pour tout afficher :
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 3.2rem;
     scrollbar-width: thin;
     scrollbar-color: var(--pink) transparent;
     &::-webkit-scrollbar {
@@ -36,6 +38,15 @@
     //
   }
 
+  &__item {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &__item:hover,
+  &__item a:focus-within {
+    transform: scale(1.03);
+  }
+
   &__item-link {
     display: flex;
     flex-direction: column;
@@ -43,7 +54,7 @@
   }
 
   &__item-image-container {
-    --img-border-radius: 0.8rem;
+    --img-border-radius: 12%;
     --img-shadow: 0.4rem;
     --img-ratio: 1 / 1;
     --img-size: 24vw;
@@ -53,19 +64,30 @@
 
   &__item-name {
     font-size: 1.4rem;
-    font-weight: 950;
-    letter-spacing: 6%;
+    font-weight: 800;
+    letter-spacing: 3%;
     text-transform: uppercase;
     color: var(--beige);
     max-width: 24vw; // même taille que image-container
     min-width: 9.6rem; // même taille min. que image-container
+  }
+
+  &__link-container {
+    width: fit-content;
   }
 }
 
 /* tablette */
 
 @include breakpoints.tablet {
-  .creations {
+  .creations-section {
+    margin-top: 8rem;
+    gap: 5.4rem;
+
+    &__title {
+      font-size: 2.4rem;
+    }
+
     &__list {
       gap: 3.2rem;
     }
@@ -75,13 +97,14 @@
     }
 
     &__item-image-container {
-      --img-border-radius: 1.2rem;
       --img-shadow: 0.6rem;
+      --img-size: 20vw;
       --img-padding: 2.4rem;
     }
 
     &__item-name {
       font-size: 1.6rem;
+      max-width: 20vw; // même taille que image-container
     }
   }
 }
@@ -89,7 +112,14 @@
 /* desktop */
 
 @include breakpoints.desktop {
-  .creations {
+  .creations-section {
+    margin-top: 6rem;
+    gap: 6rem;
+
+    &__title {
+      font-size: 2.8rem;
+    }
+
     &__list {
       gap: 4rem;
     }
@@ -99,9 +129,14 @@
     }
 
     &__item-image-container {
-      --img-border-radius: 1.6rem;
       --img-shadow: 0.8rem;
+      --img-size: 16vw;
       --img-padding: 3.2rem;
+    }
+
+    &__item-name {
+      font-size: 1.8rem;
+      max-width: 16vw; // même taille que image-container
     }
   }
 }

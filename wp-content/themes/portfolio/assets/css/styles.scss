@@ -10,8 +10,9 @@
 @use 'general/partials/header';
 @use 'general/partials/footer';
 
-@use 'general/components/action-buttons';
+@use 'general/components/action-button';
 @use 'general/components/image-container';
+@use 'general/components/creations-section';
 
-@use 'general/content/hero';
-@use 'general/content/creations-card';
+@use 'general/content/home/hero';
+@use 'general/content/creations/creations';

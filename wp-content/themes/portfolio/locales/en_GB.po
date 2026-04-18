@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/portfolio\n"
-"POT-Creation-Date: 2026-04-14 21:07+0200\n"
-"PO-Revision-Date: 2026-04-14 21:07+0200\n"
+"POT-Creation-Date: 2026-04-17 23:31+0200\n"
+"PO-Revision-Date: 2026-04-17 23:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -30,14 +30,6 @@ msgstr "My socials"
 #: footer.php:43
 msgid "© Eline Schmitz 2026. Tous droits réservés."
 msgstr "© Eline Schmitz 2026. All rights reserved."
-
-#: front-page.php:31
-msgid "Mon univers"
-msgstr "My universe"
-
-#: front-page.php:41
-msgid "Me contacter"
-msgstr "Get in touch"
 
 #: header.php:14
 msgid "design web, développement web, brutalisme, minimalisme"
@@ -75,26 +67,60 @@ msgstr "Close the menu"
 msgid "Traduire en Anglais"
 msgstr "Translate to French"
 
-#: templates/creations-card.php:27
+#: index.php:5
+msgid "Désolé, aucune page ne correspond à vos critères."
+msgstr "Sorry, no posts matched your criteria."
+
+#: templates/components/creations-section.php:27
+#: templates/content/creations/cards.php:52
 msgid "Voir la création : "
 msgstr "Take a look at the creation: "
 
-#: templates/creations-card.php:33
+#: templates/components/creations-section.php:33
+#: templates/content/creations/cards.php:57
 msgid "Illustration de la création : "
 msgstr "Illustration of the creation: "
 
-#: templates/creations-card.php:49
+#: templates/components/creations-section.php:49
 msgid "Plus de créations"
 msgstr "More creations"
+
+#: templates/content/creations/filters.php:34
+msgid "Afficher les créations web"
+msgstr "Display the web creations"
+
+#: templates/content/creations/filters.php:35
+msgid "Afficher les créations mobile"
+msgstr "Display the mobile creations"
+
+#: templates/content/creations/filters.php:36
+msgid "Afficher les autres créations"
+msgstr "Display the other creations"
+
+#: templates/content/creations/filters.php:45
+msgid "Afficher toutes les créations"
+msgstr "Display all the creations"
+
+#: templates/content/creations/filters.php:46
+msgid "Toutes"
+msgstr "All"
+
+#: templates/content/home/hero.php:35
+msgid "Mon univers"
+msgstr "My universe"
+
+#: templates/content/home/hero.php:45
+msgid "Me contacter"
+msgstr "Get in touch"
+
+#~ msgid "toutes"
+#~ msgstr "all"
 
 #~ msgid "Découvrir mon univers"
 #~ msgstr "Explore my universe"
 
 #~ msgid "Vers la page de contact"
 #~ msgstr "To the contact page"
-
-#~ msgid "Découvrir mes autres créations"
-#~ msgstr "Explore my other creations"
 
 #~ msgid "fr"
 #~ msgstr "en"

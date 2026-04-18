@@ -1,0 +1,138 @@
+@use '../../../settings/variables/breakpoints';
+
+@keyframes slideWords {
+  /* mot 1 */
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0);
+  }
+
+  /* mot 2 */
+  33% {
+    transform: translateY(calc(-1 * var(--word-height)));
+  }
+  58% {
+    transform: translateY(calc(-1 * var(--word-height)));
+  }
+
+  /* mot 3 */
+  66% {
+    transform: translateY(calc(-2 * var(--word-height)));
+  }
+  91% {
+    transform: translateY(calc(-2 * var(--word-height)));
+  }
+
+  /* clone du mot 1 -> retour invisible */
+  100% {
+    transform: translateY(calc(-3 * var(--word-height)));
+  }
+}
+
+/* mobile first */
+
+.hero {
+  --word-height: 48px; // hauteur d'un mot (mobile)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__intro {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 36ch;
+  }
+
+  &__words-slider {
+    margin: 2rem 0 6.4rem;
+    height: var(--word-height); // hauteur d'un mot
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__words-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: slideWords 8s infinite ease-in-out;
+  }
+
+  &__word {
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+    height: var(--word-height); // hauteur d'un mot
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__action {
+    width: 18rem;
+  }
+}
+
+/* tablette */
+
+@include breakpoints.tablet {
+  .hero {
+    --word-height: 54px; // hauteur d'un mot (tablette)
+
+    &__intro {
+      font-size: 2rem;
+    }
+
+    &__words-slider {
+      margin: 3rem 0 8rem;
+    }
+
+    &__word {
+      font-size: 3.6rem;
+    }
+
+    &__actions {
+      flex-direction: row;
+    }
+
+    &__action {
+      width: fit-content;
+    }
+  }
+}
+
+/* desktop */
+
+@include breakpoints.desktop {
+  .hero {
+    --word-height: 60px; // hauteur d'un mot (desktop)
+
+    &__intro {
+      font-size: 2.4rem;
+    }
+
+    &__words-slider {
+      margin: 4rem 0 9.6rem;
+    }
+
+    &__word {
+      font-size: 4rem;
+    }
+
+    &__actions {
+      gap: 4rem;
+    }
+  }
+}
