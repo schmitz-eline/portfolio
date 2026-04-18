@@ -1,0 +1,229 @@
+@use '../../../settings/variables/breakpoints';
+
+// mobile first
+
+.creations {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+  }
+
+  &__filters {
+    margin: 4rem 0 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: space-between;
+  }
+
+  &__filter {
+    box-sizing: border-box;
+    padding: 1.2rem 2rem;
+    border-radius: 10rem;
+    border: 0.24rem solid var(--beige);
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    overflow: hidden;
+    width: 40vw;
+  }
+
+  &__filter::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--beige);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__filter:hover {
+    border: 0.24rem solid var(--dark);
+  }
+
+  &__filter:hover::before,
+  &__filter:focus-within::before {
+    transform: scaleX(1);
+  }
+
+  &__filter-link {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__filter:hover a,
+  &__filter:focus-within a {
+    color: var(--dark);
+  }
+
+  .active-filter {
+    background-color: var(--beige);
+    border: 0.24rem solid var(--dark);
+  }
+
+  .active-filter a {
+    color: var(--dark);
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__card {
+    display: flex;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+
+    &.is-even {
+      justify-content: flex-end;
+    }
+
+    &.is-even a {
+      align-items: end;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.is-visible {
+      display: flex;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &__card-link {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &:focus-within {
+      transform: scale(1.03);
+    }
+  }
+
+  &__image-container {
+    --img-border-radius: 12%;
+    --img-shadow: 0.6rem;
+    --img-ratio: 1 / 1;
+    --img-size: 60vw;
+    --img-padding: 2rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+  }
+}
+
+// breakpoint intermédiaire pour les filtres
+
+@media (min-width: 520px) {
+  .creations {
+    &__filters {
+      justify-content: unset;
+      flex-wrap: unset;
+    }
+
+    &__filter {
+      width: fit-content;
+    }
+  }
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .creations {
+    &__title {
+      font-size: 3.6rem;
+    }
+
+    &__filters {
+      margin: 5rem 0 10rem;
+    }
+
+    &__cards {
+      gap: 5.2rem;
+    }
+
+    &__card-link {
+      gap: 2.4rem;
+    }
+
+    &__image-container {
+      --img-shadow: 0.9rem;
+      --img-size: 50vw;
+      --img-padding: 3rem;
+    }
+
+    &__name {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .creations {
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__filters {
+      margin: 6rem 0 12rem;
+    }
+
+    &__cards {
+      gap: 6.4rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      width: fit-content;
+
+      &.is-even {
+        justify-content: unset;
+      }
+
+      &.is-even a {
+        align-items: unset;
+      }
+    }
+
+    &__card-link {
+      gap: 2.8rem;
+    }
+
+    &__image-container {
+      --img-shadow: 1.2rem;
+      --img-size: 24vw;
+    }
+
+    &__name {
+      width: 24vw; // même taille que l'image
+      font-size: 2.8rem;
+    }
+  }
+}

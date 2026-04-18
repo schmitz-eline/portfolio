@@ -20,8 +20,11 @@ main {
   padding: 8rem 2rem 10rem;
 
   @include breakpoints.tablet {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: 9.2rem 4rem 14rem;
+  }
+
+  @include breakpoints.desktop {
+    padding: 10rem 8rem 16rem;
   }
 }
 

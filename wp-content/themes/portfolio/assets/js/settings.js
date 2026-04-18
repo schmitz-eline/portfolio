@@ -1,10 +1,17 @@
-export const burgerButtonSelector = '.header__burger';
-export const closeButtonSelector = '.header__close';
-export const navListSelector = '.header__nav-list';
-export const navItemSelector = '.header__nav-item';
-export const openClass = 'header__nav-list--open';
-export const actionClass = 'action';
+export const settings = {
+    // header
+    burgerButtonSelector: '.header__burger',
+    closeButtonSelector: '.header__close',
+    navListSelector: '.header__nav-list',
+    navItemSelector: '.header__nav-item',
+    openClass: 'header__nav-list--open',
+    actionClass: 'action',
 
-// words slider
-export const wordsInnerDivSelector = '.hero__words-inner';
-export const wordSpanSelector = '.hero__word';
+    // creations filters
+    filterItemSelector: '.creations__filter',
+    cardArticleSelector: '.creations__card',
+    activeFilterClass: 'active-filter',
+    isVisibleClass: 'is-visible',
+    isHiddenClass: 'is-hidden',
+    isEvenClass: 'is-even'
+}
