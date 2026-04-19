@@ -97,3 +97,54 @@ register_taxonomy(
         'query_var' => true,
     ]
 );
+
+function remove_taxonomy_box(): void
+{
+    remove_meta_box('tagsdiv-creation_type', 'creations', 'side');
+}
+
+add_action('admin_menu', 'remove_taxonomy_box');
+
+function creations_add_taxonomy_column($columns)
+{
+    $columns['creation_type'] = 'Type de la création';
+    return $columns;
+}
+
+add_filter('manage_creations_posts_columns', 'creations_add_taxonomy_column');
+
+function creations_fill_taxonomy_column($column, $post_id): void
+{
+    if ($column === 'creation_type') {
+        $terms = get_the_terms($post_id, 'creation_type');
+
+        if (!empty($terms) && !is_wp_error($terms)) {
+            $names = wp_list_pluck($terms, 'name');
+            echo implode(', ', $names);
+        } else {
+            echo 'Aucun type sélectionné';
+        }
+    }
+}
+
+add_action('manage_creations_posts_custom_column', 'creations_fill_taxonomy_column', 10, 2);
+
+function creations_sortable_columns($columns)
+{
+    $columns['creation_type'] = 'creation_type';
+    return $columns;
+}
+
+add_filter('manage_edit-creations_sortable_columns', 'creations_sortable_columns');
+
+function creations_reorder_columns($columns): array
+{
+    return [
+        'cb' => $columns['cb'],
+        'title' => $columns['title'],
+        'creation_type' => 'Type de la création',
+        'date' => $columns['date']
+    ];
+}
+
+add_filter('manage_creations_posts_columns', 'creations_reorder_columns');
