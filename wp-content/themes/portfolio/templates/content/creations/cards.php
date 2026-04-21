@@ -4,7 +4,7 @@ $filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : 'all';
 
 // construire la requête
 $args = [
-        'post_type' => 'creations',
+        'post_type' => 'creation',
         'posts_per_page' => -1,
         'orderby' => 'title',
         'order' => 'ASC',
@@ -48,13 +48,13 @@ $creations = new WP_Query($args);
 
             <article class="creations__card" data-type="<?= esc_attr($normalized_type) ?>">
                 <a class="creations__card-link"
-                   href="<?= esc_url(get_permalink()); ?>"
-                   title="<?= esc_attr(__('Voir la création : ', 'portfolio') . get_the_title()); ?>">
+                   href="<?= esc_url($link['url']); ?>"
+                   title="<?= esc_attr($link['title']); ?>">
                     <?php if (!empty($image)): ?>
                         <figure class="creations__image-container image-container">
                             <img class="creations__image"
                                  src="<?= esc_url($image['url']) ?>"
-                                 alt="<?= esc_attr(__('Illustration de la création : ', 'portfolio') . get_the_title()); ?>">
+                                 alt="<?= esc_attr($image['alt']); ?>">
                         </figure>
                     <?php endif; ?>
                     <h3 class="creations__name">

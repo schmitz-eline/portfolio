@@ -1,0 +1,220 @@
+@use '../../../settings/variables/breakpoints';
+
+// mobile first
+
+.single-creation {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 2rem;
+  }
+
+  &__back-link {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0.8rem;
+      height: 1.2rem;
+      mask-image: url('/wp-content/themes/portfolio/assets/svg/back.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--beige);
+    }
+  }
+
+  &__part {
+    margin-top: 8rem;
+  }
+
+  &__part-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+  }
+
+  &__paragraphs {
+    margin-top: 2rem;
+  }
+
+  &__text p {
+    color: var(--beige);
+    font-size: 1.4rem;
+    font-weight: 600;
+    max-width: 60ch;
+  }
+
+  &__text a {
+    color: var(--beige);
+    position: relative;
+    display: inline-block;
+    background-size: 100% 50%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--dark), var(--dark));
+  }
+
+  &__image-container {
+    --img-border-radius: 1.6rem;
+    --img-shadow: 0.6rem;
+    --img-ratio: auto;
+    --img-size: 74vw;
+    overflow: hidden;
+  }
+
+  &__link {
+    width: 20.4rem;
+  }
+
+  &__paragraphs,
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__image-container,
+  &__actions {
+    margin-top: 4rem;
+  }
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .single-creation {
+    &__title {
+      font-size: 3.6rem;
+      margin-bottom: 3rem;
+    }
+
+    &__back-link {
+      font-size: 2rem;
+
+      &::before {
+        width: 1rem;
+        height: 1.5rem;
+      }
+    }
+
+    &__part + &__part {
+      margin-top: 14rem;
+    }
+
+    &__part-title {
+      font-size: 2.4rem;
+    }
+
+    &__paragraphs {
+      margin-top: 3rem;
+      gap: 2.4rem;
+    }
+
+    &__text p {
+      font-size: 1.8rem;
+    }
+
+    &__image-container {
+      --img-border-radius: 2rem;
+      --img-shadow: 0.8rem;
+    }
+
+    &__actions {
+      flex-direction: row;
+    }
+
+    &__link {
+      width: fit-content;
+    }
+
+    &__image-container,
+    &__actions {
+      margin-top: 5.4rem;
+    }
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .single-creation {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    &__back-link {
+      font-size: 2.4rem;
+
+      &::before {
+        width: 1.2rem;
+        height: 1.8rem;
+      }
+    }
+
+    &__part + &__part {
+      margin-top: 20rem;
+    }
+
+    &__part-title {
+      font-size: 2.8rem;
+    }
+
+    &__paragraphs {
+      margin-top: 4rem;
+      gap: 2.8rem;
+    }
+
+    &__text p {
+      font-size: 2rem;
+    }
+
+    &__actions {
+      margin: 0;
+    }
+
+    // grille
+
+    &__content {
+      display: grid;
+      grid-template-areas: 'title image' 'text image';
+      align-items: start;
+      column-gap: 8rem;
+    }
+
+    &__part-title {
+      grid-area: title;
+      align-self: end;
+    }
+
+    &__paragraphs {
+      grid-area: text;
+    }
+
+    &__image-container {
+      grid-area: image;
+      width: 100%;
+      margin: 0;
+    }
+
+    // alternance gauche / droite
+
+    &__part:nth-of-type(even) &__content {
+      grid-template-areas: 'image title' 'image text';
+    }
+  }
+}

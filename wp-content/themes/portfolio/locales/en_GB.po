@@ -1,11 +1,12 @@
 # Copyright (C) 2026 Eline Schmitz
 # This file is distributed under the same license as the Portfolio theme.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/portfolio\n"
-"POT-Creation-Date: 2026-04-17 23:31+0200\n"
-"PO-Revision-Date: 2026-04-17 23:31+0200\n"
+"POT-Creation-Date: 2026-04-20 11:06+0200\n"
+"PO-Revision-Date: 2026-04-20 11:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -14,10 +15,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
 "X-Domain: portfolio-trad\n"
-"X-Poedit-KeywordsList: __portfolio;__\n"
+"X-Poedit-KeywordsList: __portfolio;__;_e;esc_html__;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: .\n"
 
 #: footer.php:10
 msgid "Navigation du pied de page"
@@ -40,12 +40,12 @@ msgid ""
 "Portfolio d’Eline Schmitz, étudiante en Infographie. Découvrez mes créations "
 "et mon univers."
 msgstr ""
-"Portfolio by Eline Schmitz, an Infographics student. Explore my work and my "
-"universe."
+"Eline Schmitz's portfolio, a student in Infographics. Explore my creations "
+"and my universe."
 
 #: header.php:19
 msgid "Portfolio d’Eline Schmitz"
-msgstr "Eline Schmitz’s portfolio"
+msgstr "Eline Schmitz's portfolio"
 
 #: header.php:26
 msgid "Vers la page d’accueil"
@@ -64,22 +64,16 @@ msgid "Fermer le menu"
 msgstr "Close the menu"
 
 #: header.php:77
-msgid "Traduire en Anglais"
-msgstr "Translate to French"
+msgid "Traduire en anglais"
+msgstr "Translate in French"
 
 #: index.php:5
 msgid "Désolé, aucune page ne correspond à vos critères."
-msgstr "Sorry, no posts matched your criteria."
+msgstr "Sorry, no pages match your criteria."
 
-#: templates/components/creations-section.php:27
-#: templates/content/creations/cards.php:52
-msgid "Voir la création : "
-msgstr "Take a look at the creation: "
-
-#: templates/components/creations-section.php:33
-#: templates/content/creations/cards.php:57
-msgid "Illustration de la création : "
-msgstr "Illustration of the creation: "
+#: single-creation.php:14
+msgid "Mes autres créations"
+msgstr "My other creations"
 
 #: templates/components/creations-section.php:49
 msgid "Plus de créations"
@@ -95,7 +89,7 @@ msgstr "Display the mobile creations"
 
 #: templates/content/creations/filters.php:36
 msgid "Afficher les autres créations"
-msgstr "Display the other creations"
+msgstr "Display the others creations"
 
 #: templates/content/creations/filters.php:45
 msgid "Afficher toutes les créations"
@@ -113,20 +107,8 @@ msgstr "My universe"
 msgid "Me contacter"
 msgstr "Get in touch"
 
-#~ msgid "toutes"
-#~ msgstr "all"
+#~ msgid "Voir la création : "
+#~ msgstr "Have a look to the creation: "
 
-#~ msgid "Découvrir mon univers"
-#~ msgstr "Explore my universe"
-
-#~ msgid "Vers la page de contact"
-#~ msgstr "To the contact page"
-
-#~ msgid "fr"
-#~ msgstr "en"
-
-#~ msgid "Eline Schmitz"
-#~ msgstr "Eline Schmitz"
-
-#~ msgid "Navigation"
-#~ msgstr "Navigation"
+#~ msgid "Illustration de la création : "
+#~ msgstr "Illustration of the creation: "

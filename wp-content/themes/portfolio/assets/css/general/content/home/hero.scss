@@ -80,7 +80,7 @@
     gap: 2rem;
   }
 
-  &__action {
+  &__link {
     width: 18rem;
   }
 }
@@ -107,7 +107,7 @@
       flex-direction: row;
     }
 
-    &__action {
+    &__link {
       width: fit-content;
     }
   }

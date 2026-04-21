@@ -66,25 +66,26 @@ function eline_allow_svg_uploads($mimes)
 add_filter('upload_mimes', 'eline_allow_svg_uploads');
 
 register_post_type(
-    'creations',
+    'creation',
     [
         'label' => 'Créations',
         'description' => 'Les créations que j’ai réalisées',
         'menu_position' => 20,
         'menu_icon' => 'dashicons-edit',
         'public' => true,
-        'has_archive' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
         'rewrite' => ['slug' => 'creations'],
-        'supports' => [
-            'title'
-        ]
+        'has_archive' => false,
+        'supports' => ['title']
     ]
 );
 
 register_taxonomy(
     'creation_type',
     [
-        'creations'
+        'creation'
     ],
     [
         'labels' => [
@@ -98,9 +99,15 @@ register_taxonomy(
     ]
 );
 
+add_image_size('eline-small', 400, 9999);
+add_image_size('eline-medium', 800, 9999);
+add_image_size('eline-large', 1200, 9999);
+
+// préférences d'affichage dans l'admin
+
 function remove_taxonomy_box(): void
 {
-    remove_meta_box('tagsdiv-creation_type', 'creations', 'side');
+    remove_meta_box('tagsdiv-creation_type', 'creation', 'side');
 }
 
 add_action('admin_menu', 'remove_taxonomy_box');
@@ -111,7 +118,7 @@ function creations_add_taxonomy_column($columns)
     return $columns;
 }
 
-add_filter('manage_creations_posts_columns', 'creations_add_taxonomy_column');
+add_filter('manage_creation_posts_columns', 'creations_add_taxonomy_column');
 
 function creations_fill_taxonomy_column($column, $post_id): void
 {
@@ -127,7 +134,7 @@ function creations_fill_taxonomy_column($column, $post_id): void
     }
 }
 
-add_action('manage_creations_posts_custom_column', 'creations_fill_taxonomy_column', 10, 2);
+add_action('manage_creation_posts_custom_column', 'creations_fill_taxonomy_column', 10, 2);
 
 function creations_sortable_columns($columns)
 {
@@ -135,7 +142,7 @@ function creations_sortable_columns($columns)
     return $columns;
 }
 
-add_filter('manage_edit-creations_sortable_columns', 'creations_sortable_columns');
+add_filter('manage_edit-creation_sortable_columns', 'creations_sortable_columns');
 
 function creations_reorder_columns($columns): array
 {
@@ -147,4 +154,4 @@ function creations_reorder_columns($columns): array
     ];
 }
 
-add_filter('manage_creations_posts_columns', 'creations_reorder_columns');
+add_filter('manage_creation_posts_columns', 'creations_reorder_columns');

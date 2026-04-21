@@ -64,7 +64,7 @@ $currentLanguage = pll_current_language();
                         <a class="header__nav-link <?= ($currentPage === $link_path) ? 'active' : '' ?>"
                            href="<?= $link->href ?>"
                            title="<?= $link->title ?>" <?= ($currentPage === $link_path) ? 'aria-current="page"' : '' ?>>
-                            <?= $link->label ?>
+                            <span><?= $link->label ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>
@@ -74,7 +74,7 @@ $currentLanguage = pll_current_language();
                 <?php foreach ($languages as $lang): ?>
                     <?php if ($lang['slug'] !== $currentLanguage): ?>
                         <a class="header__lang-link" href="<?= $lang['url'] ?>"
-                           title="<?= __portfolio('Traduire en Anglais') ?>">
+                           title="<?= __portfolio('Traduire en anglais') ?>">
                             <?= strtoupper($lang['slug']) ?>
                         </a>
                     <?php endif; ?>

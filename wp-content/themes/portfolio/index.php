@@ -2,5 +2,5 @@
     <?= get_the_title(); ?>
     <?= get_the_content(); ?>
 <?php endwhile; else: ?>
-    <p><?php __('Désolé, aucune page ne correspond à vos critères.', 'portfolio'); ?></p>
+    <p><?php esc_html(__portfolio('Désolé, aucune page ne correspond à vos critères.')) ?></p>
 <?php endif; ?>

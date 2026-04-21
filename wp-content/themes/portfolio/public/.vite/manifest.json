@@ -1,6 +1,6 @@
 {
   "wp-content/themes/portfolio/assets/css/styles.scss": {
-    "file": "assets/scss-DDgx87Ky.css",
+    "file": "assets/scss-BUk-hDyG.css",
     "src": "wp-content/themes/portfolio/assets/css/styles.scss",
     "isEntry": true
   },
@@ -21,9 +21,13 @@
     "src": "wp-content/themes/portfolio/assets/fonts/TT_Commons_Pro_Trial_Medium_Italic.ttf"
   },
   "wp-content/themes/portfolio/assets/js/main.js": {
-    "file": "assets/js-L78Hi18u.js",
+    "file": "assets/js-CCIyGDoZ.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/assets/js/main.js",
     "isEntry": true
+  },
+  "wp-content/themes/portfolio/assets/svg/back.svg": {
+    "file": "assets/back-CFB0C5Ml.svg",
+    "src": "wp-content/themes/portfolio/assets/svg/back.svg"
   }
 }
