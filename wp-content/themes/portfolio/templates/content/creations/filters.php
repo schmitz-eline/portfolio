@@ -42,8 +42,8 @@ $aria_labels = [
         <li class="creations__filter active-filter" data-filter="all">
             <a class="creations__filter-link"
                href="<?= esc_url($creations_url); ?>"
-               aria-label="<?= esc_attr(__('Afficher toutes les créations', 'portfolio')); ?>">
-                <?= esc_html(__portfolio('Toutes')); ?>
+               aria-label="<?= esc_attr(__portfolio('Afficher toutes les créations')); ?>">
+                <span><?= esc_html(__portfolio('Toutes')); ?></span>
             </a>
         </li>
 
@@ -59,7 +59,7 @@ $aria_labels = [
                 <a class="creations__filter-link"
                    href="<?= esc_url($filter_url); ?>"
                    aria-label="<?= esc_attr($aria_label); ?>">
-                    <?= esc_html($type->name); ?>
+                    <span><?= esc_html($type->name); ?></span>
                 </a>
             </li>
         <?php endforeach; ?>

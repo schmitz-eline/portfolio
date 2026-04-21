@@ -18,24 +18,7 @@
   &__list {
     display: flex;
     gap: 4vw;
-    overflow: visible;
-
-    // scroller si l'écran est trop petit pour tout afficher :
     overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: var(--pink) transparent;
-    &::-webkit-scrollbar {
-      height: 2px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: var(--pink);
-      border-radius: 50px;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    //
   }
 
   &__item {
@@ -72,7 +55,7 @@
     min-width: 9.6rem; // même taille min. que image-container
   }
 
-  &__link-container {
+  &__link {
     width: fit-content;
   }
 }
@@ -90,6 +73,7 @@
 
     &__list {
       gap: 3.2rem;
+      overflow: visible;
     }
     
     &__item-link {

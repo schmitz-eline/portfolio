@@ -5,7 +5,10 @@
   border-radius: 10rem;
   border: 0.24rem solid var(--dark);
   box-shadow: var(--dark) 0.4rem 0.4rem;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
   position: relative;
   transition: color 0.3s ease-in-out;
   overflow: hidden;
@@ -21,15 +24,18 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.action a {
+.action span {
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: 3%;
   text-transform: uppercase;
   color: var(--dark);
-  display: block;
   text-align: center;
-  position: relative;
+  z-index: 1;
+}
+
+.action img {
+  width: 2rem;
   z-index: 1;
 }
 

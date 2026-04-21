@@ -28,21 +28,21 @@ $contact_link = get_field('hero_contact_link');
 
     <ul class="hero__actions">
         <?php if (!empty($universe_link)): ?>
-            <li class="hero__action action">
-                <a class="hero__link"
+            <li class="hero__action">
+                <a class="hero__link action"
                    href="<?= esc_url($universe_link['url']); ?>"
                    title="<?= esc_attr($universe_link['title']); ?>">
-                    <?= esc_html(__('Mon univers', 'portfolio')); ?>
+                    <span><?= esc_html(__portfolio('Mon univers')); ?></span>
                 </a>
             </li>
         <?php endif; ?>
 
         <?php if (!empty($contact_link)): ?>
-            <li class="hero__action action">
-                <a class="hero__link"
+            <li class="hero__action">
+                <a class="hero__link action"
                    href="<?= esc_url($contact_link['url']); ?>"
                    title="<?= esc_attr($contact_link['title']); ?>">
-                    <?= esc_html(__('Me contacter', 'portfolio')); ?>
+                    <span><?= esc_html(__portfolio('Me contacter')); ?></span>
                 </a>
             </li>
         <?php endif; ?>

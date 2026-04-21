@@ -5,7 +5,7 @@ const header = {
         this.burgerButtonElement = document.querySelector(settings.burgerButtonSelector);
         this.closeButtonElement = document.querySelector(settings.closeButtonSelector);
         this.navListElement = document.querySelector(settings.navListSelector);
-        this.navItemElements = document.querySelectorAll(settings.navItemSelector);
+        this.navLinkElements = document.querySelectorAll(settings.navLinkSelector);
         this.openClass = settings.openClass;
         this.actionClass = settings.actionClass;
 
@@ -17,8 +17,8 @@ const header = {
         this.burgerButtonElement.addEventListener('click', () => {
             this.burgerButtonElement.setAttribute('aria-expanded', 'true');
             this.navListElement.classList.add(this.openClass);
-            this.navItemElements.forEach((item) => {
-                item.classList.add(this.actionClass);
+            this.navLinkElements.forEach((link) => {
+                link.classList.add(this.actionClass);
             });
         });
     },

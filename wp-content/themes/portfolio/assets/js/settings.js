@@ -3,7 +3,7 @@ export const settings = {
     burgerButtonSelector: '.header__burger',
     closeButtonSelector: '.header__close',
     navListSelector: '.header__nav-list',
-    navItemSelector: '.header__nav-item',
+    navLinkSelector: '.header__nav-link',
     openClass: 'header__nav-list--open',
     actionClass: 'action',
 
