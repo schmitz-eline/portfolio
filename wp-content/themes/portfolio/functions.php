@@ -103,6 +103,12 @@ add_image_size('eline-small', 400, 9999);
 add_image_size('eline-medium', 800, 9999);
 add_image_size('eline-large', 1200, 9999);
 
+add_image_size('eline-square-small', 400, 400, true);
+add_image_size('eline-square-medium', 800, 800, true);
+add_image_size('eline-square-large', 1200, 1200, true);
+
+
+
 // préférences d'affichage dans l'admin
 
 function remove_taxonomy_box(): void

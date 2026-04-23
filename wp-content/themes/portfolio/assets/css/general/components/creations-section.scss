@@ -3,7 +3,6 @@
 /* mobile first */
 
 .creations-section {
-  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -64,7 +63,6 @@
 
 @include breakpoints.tablet {
   .creations-section {
-    margin-top: 8rem;
     gap: 5.4rem;
 
     &__title {
@@ -97,7 +95,6 @@
 
 @include breakpoints.desktop {
   .creations-section {
-    margin-top: 6rem;
     gap: 6rem;
 
     &__title {

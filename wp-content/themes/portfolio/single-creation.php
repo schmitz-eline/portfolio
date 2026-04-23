@@ -49,16 +49,22 @@ $content = get_field('tm_content');
                             ?>
                             <?php if ($image): ?>
                                 <figure class="single-creation__image-container image-container">
-                                    <?= wp_get_attachment_image(
-                                            $image['id'],
-                                            'eline-medium',
-                                            false,
-                                            [
-                                                    'class' => 'single-creation__image',
-                                                    'loading' => 'lazy',
-                                                    'sizes' => '100vw'
-                                            ]
-                                    ) ?>
+                                    <picture>
+                                        <source
+                                                srcset="<?= get_template_directory_uri() ?>/assets/images/<?= $image['filename']; ?>.webp"
+                                                type="image/webp">
+
+                                        <?= wp_get_attachment_image(
+                                                $image['id'],
+                                                'eline-medium',
+                                                false,
+                                                [
+                                                        'class' => 'single-creation__image',
+                                                        'loading' => 'lazy',
+                                                        'sizes' => '(min-width: 1024px) 700px, 74vw'
+                                                ]
+                                        ) ?>
+                                    </picture>
                                 </figure>
                             <?php endif; ?>
                         </div>

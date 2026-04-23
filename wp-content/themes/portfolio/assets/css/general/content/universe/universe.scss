@@ -1,0 +1,355 @@
+@use '../../../settings/variables/breakpoints';
+
+// mobile first
+
+.universe {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 4rem;
+  }
+
+  &__article + &__article {
+    margin-top: 8rem;
+  }
+
+  &__intro__title,
+  &__journey__title,
+  &__tec-skills__title,
+  &__strengths__title,
+  &__hobbies__title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+  }
+
+  &__intro__title,
+  &__strengths__title,
+  &__hobbies__title {
+    margin-bottom: 2rem;
+  }
+
+  &__journey__title,
+  &__tec-skills__title {
+    margin-bottom: 4rem;
+  }
+
+  &__intro__text,
+  &__journey__detail,
+  &__strengths__text,
+  &__hobbies__text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--beige);
+    max-width: 60ch;
+  }
+
+  &__intro__wrapper {
+    margin-bottom: 4rem;
+  }
+
+  &__journey__list {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__journey__sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__journey__date {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    color: var(--beige);
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      flex-shrink: 0;
+      line-height: 0;
+      mask-image: url('/wp-content/themes/portfolio/assets/svg/step-circle.svg');
+      mask-size: 100% 100%;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--pink);
+    }
+  }
+
+  &__journey__localisation {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--beige);
+  }
+
+  &__journey__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__journey__action {
+    width: 20rem;
+  }
+
+  &__tec-skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.8rem;
+  }
+
+  &__tec-skills__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__tec-skills__image-container {
+    --img-border-radius: 10%;
+    --img-shadow: 0.4rem;
+    --img-ratio: 1 / 1;
+    --img-size: 20vw;
+    --img-padding: 1.2rem;
+    min-width: 8rem;
+  }
+
+  &__tec-skills__name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    color: var(--beige);
+  }
+
+  &__intro__image-container,
+  &__hobbies__image-container {
+    --img-border-radius: 8%;
+    --img-shadow: 0.6rem;
+    --img-ratio: 1 / 1;
+    --img-size: 64vw;
+    overflow: hidden;
+  }
+
+  &__intro__image-container img,
+  &__hobbies__image-container img {
+    object-fit: cover;
+  }
+
+  &__hobbies__image-container,
+  &__hobbies__text-media + &__hobbies__text {
+    margin-top: 4rem;
+  }
+
+  &__hobbies__text + &__hobbies__text {
+    margin-top: 2rem;
+  }
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .universe {
+    &__title {
+      font-size: 3.6rem;
+      margin-bottom: 5rem;
+    }
+
+    &__article + &__article {
+      margin-top: 14rem;
+    }
+
+    &__intro__title,
+    &__journey__title,
+    &__tec-skills__title,
+    &__strengths__title,
+    &__hobbies__title {
+      font-size: 2.4rem;
+    }
+
+    &__intro__title,
+    &__strengths__title,
+    &__hobbies__title {
+      margin-bottom: 3rem;
+    }
+
+    &__journey__title,
+    &__tec-skills__title,
+    &__intro__wrapper {
+      margin-bottom: 5.4rem;
+    }
+
+    &__intro__text,
+    &__journey__date,
+    &__journey__detail,
+    &__journey__localisation,
+    &__tec-skills__name,
+    &__strengths__text,
+    &__hobbies__text {
+      font-size: 1.6rem;
+    }
+
+    &__journey__list {
+      margin-bottom: 5.4rem;
+      gap: 5.4rem;
+    }
+
+    &__journey__date {
+      gap: 1.8rem;
+
+      &::before {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+
+    &__tec-skills__list {
+      gap: 3.6rem;
+    }
+
+    &__journey__sublist,
+    &__tec-skills__item {
+      gap: 1.6rem;
+    }
+
+    &__tec-skills__image-container {
+      --img-shadow: 0.6rem;
+      --img-size: 16vw;
+      --img-padding: 1.8rem;
+    }
+
+    &__intro__image-container,
+    &__hobbies__image-container {
+      --img-shadow: 0.9rem;
+      --img-size: 54vw;
+    }
+
+    &__hobbies__image-container,
+    &__hobbies__text-media + &__hobbies__text {
+      margin-top: 5.4rem;
+    }
+
+    &__hobbies__text + &__hobbies__text {
+      margin-top: 3rem;
+    }
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .universe {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 0;
+    }
+
+    &__article + &__article {
+      margin-top: 20rem;
+    }
+
+    &__intro__title,
+    &__journey__title,
+    &__tec-skills__title,
+    &__strengths__title,
+    &__hobbies__title {
+      font-size: 2.8rem;
+    }
+
+    &__intro__title,
+    &__strengths__title,
+    &__hobbies__title {
+      margin-bottom: 4rem;
+    }
+
+    &__journey__title,
+    &__tec-skills__title {
+      margin-bottom: 6rem;
+    }
+
+    &__intro__text,
+    &__journey__date,
+    &__journey__detail,
+    &__journey__localisation,
+    &__tec-skills__name,
+    &__strengths__text,
+    &__hobbies__text {
+      font-size: 1.8rem;
+    }
+
+    &__intro__wrapper {
+      margin-bottom: 0;
+    }
+
+    &__journey__list {
+      margin-bottom: 6rem;
+      gap: 6rem;
+    }
+
+    &__journey__date {
+      gap: 2rem;
+
+      &::before {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &__journey__actions {
+      flex-direction: row;
+    }
+
+    &__tec-skills__list {
+      gap: 4.4rem;
+    }
+
+    &__journey__sublist,
+    &__tec-skills__item {
+      gap: 2rem;
+    }
+
+    &__tec-skills__image-container {
+      --img-shadow: 0.8rem;
+      --img-size: 12vw;
+      --img-padding: 2.4rem;
+    }
+
+    &__intro,
+    &__hobbies__text-media {
+      display: flex;
+      gap: 8rem;
+      align-items: center;
+    }
+
+    &__intro__image-container,
+    &__hobbies__image-container {
+      --img-shadow: 1.2rem;
+      --img-size: 20vw;
+    }
+
+    &__hobbies__image-container {
+      margin-top: 0;
+    }
+
+    &__hobbies__text-media + &__hobbies__text {
+      margin-top: 6rem;
+    }
+
+    &__hobbies__text + &__hobbies__text {
+      margin-top: 4rem;
+    }
+  }
+}

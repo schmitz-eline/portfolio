@@ -38,6 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 8rem;
 
   &__intro {
     font-size: 1.6rem;
@@ -117,6 +118,7 @@
 
 @include breakpoints.desktop {
   .hero {
+    margin-bottom: 6rem;
     --word-height: 60px; // hauteur d'un mot (desktop)
 
     &__intro {
