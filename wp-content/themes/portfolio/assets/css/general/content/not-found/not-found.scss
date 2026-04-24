@@ -1,0 +1,79 @@
+@use '../../../settings/variables/breakpoints';
+
+// mobile first
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+  }
+
+  &__link {
+    width: fit-content;
+  }
+
+  &__link span {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  &__link span::before {
+    content: '';
+    display: inline-block;
+    width: 0.8rem;
+    height: 1.2rem;
+    mask-image: url('/wp-content/themes/portfolio/assets/svg/back.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--dark);
+  }
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .not-found {
+    gap: 5.4rem;
+
+    &__title {
+      font-size: 3.6rem;
+    }
+
+    &__text {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .not-found {
+    gap: 6rem;
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__text {
+      font-size: 2.8rem;
+    }
+  }
+}

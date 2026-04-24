@@ -107,6 +107,16 @@ add_image_size('eline-square-small', 400, 400, true);
 add_image_size('eline-square-medium', 800, 800, true);
 add_image_size('eline-square-large', 1200, 1200, true);
 
+add_filter('template_include', function ($template) {
+    if (is_404()) {
+        $custom_404 = get_stylesheet_directory() . '/404.php';
+        if (file_exists($custom_404)) {
+            return $custom_404;
+        }
+    }
+
+    return $template;
+}, 99);
 
 
 // préférences d'affichage dans l'admin

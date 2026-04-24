@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/portfolio\n"
-"POT-Creation-Date: 2026-04-20 11:06+0200\n"
-"PO-Revision-Date: 2026-04-20 11:08+0200\n"
+"POT-Creation-Date: 2026-04-24 11:06+0200\n"
+"PO-Revision-Date: 2026-04-24 11:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -18,6 +18,18 @@ msgstr ""
 "X-Poedit-KeywordsList: __portfolio;__;_e;esc_html__;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:7
+msgid "Vous êtes perdu·e ?"
+msgstr "Are you lost?"
+
+#: 404.php:12
+msgid "Retourner vers la page d’accueil"
+msgstr "Go back to the home page"
+
+#: 404.php:13
+msgid "Retourner à l’accueil"
+msgstr "Go back to home"
 
 #: footer.php:10
 msgid "Navigation du pied de page"
@@ -31,11 +43,11 @@ msgstr "My socials"
 msgid "© Eline Schmitz 2026. Tous droits réservés."
 msgstr "© Eline Schmitz 2026. All rights reserved."
 
-#: header.php:14
+#: header.php:15
 msgid "design web, développement web, brutalisme, minimalisme"
 msgstr "web design, web development, brutalism, minimalism"
 
-#: header.php:15
+#: header.php:17
 msgid ""
 "Portfolio d’Eline Schmitz, étudiante en Infographie. Découvrez mes créations "
 "et mon univers."
@@ -43,27 +55,27 @@ msgstr ""
 "Eline Schmitz's portfolio, a student in Infographics. Explore my creations "
 "and my universe."
 
-#: header.php:19
+#: header.php:23 header.php:25
 msgid "Portfolio d’Eline Schmitz"
 msgstr "Eline Schmitz's portfolio"
 
-#: header.php:26
+#: header.php:40
 msgid "Vers la page d’accueil"
 msgstr "To the home page"
 
-#: header.php:32
+#: header.php:46
 msgid "Ouvrir le menu"
 msgstr "Open the menu"
 
-#: header.php:44
+#: header.php:58
 msgid "Navigation de l’en-tête de page"
 msgstr "Header navigation"
 
-#: header.php:49
+#: header.php:63
 msgid "Fermer le menu"
 msgstr "Close the menu"
 
-#: header.php:77
+#: header.php:91
 msgid "Traduire en anglais"
 msgstr "Translate in French"
 
@@ -71,13 +83,9 @@ msgstr "Translate in French"
 msgid "Désolé, aucune page ne correspond à vos critères."
 msgstr "Sorry, no pages match your criteria."
 
-#: single-creation.php:14
+#: single-creation.php:15
 msgid "Mes autres créations"
 msgstr "My other creations"
-
-#: templates/components/creations-section.php:49
-msgid "Plus de créations"
-msgstr "More creations"
 
 #: templates/content/creations/filters.php:34
 msgid "Afficher les créations web"
@@ -99,13 +107,22 @@ msgstr "Display all the creations"
 msgid "Toutes"
 msgstr "All"
 
+#: templates/content/home/creations-section.php:48
+#: templates/content/universe/creations.php:48
+msgid "Plus de créations"
+msgstr "More creations"
+
 #: templates/content/home/hero.php:35
 msgid "Mon univers"
 msgstr "My universe"
 
-#: templates/content/home/hero.php:45
+#: templates/content/home/hero.php:45 templates/content/universe/journey.php:56
 msgid "Me contacter"
 msgstr "Get in touch"
+
+#: templates/content/universe/journey.php:45
+msgid "Mon CV en PDF"
+msgstr "My CV in PDF"
 
 #~ msgid "Voir la création : "
 #~ msgstr "Have a look to the creation: "

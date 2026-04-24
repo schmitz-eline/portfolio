@@ -11,15 +11,29 @@ $currentLanguage = pll_current_language();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Eline Schmitz">
-    <meta name="keywords" content="Eline Schmitz, portfolio, <?= __portfolio('design web, développement web, brutalisme, minimalisme') ?>">
-    <meta name="description" content="<?= __portfolio('Portfolio d’Eline Schmitz, étudiante en Infographie. Découvrez mes créations et mon univers.') ?>">
+    <meta name="keywords"
+          content="Eline Schmitz, portfolio, <?= __portfolio('design web, développement web, brutalisme, minimalisme') ?>">
+    <meta name="description"
+          content="<?= __portfolio('Portfolio d’Eline Schmitz, étudiante en Infographie. Découvrez mes créations et mon univers.') ?>">
     <link rel="canonical" href="<?= get_permalink(); ?>">
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css') ?>">
     <script defer type="module" src="<?= portfolio_asset('js') ?>"></script>
-    <title><?= get_the_title(); ?> - <?= __portfolio('Portfolio d’Eline Schmitz') ?></title>
+    <title>
+        <?php if (is_404()): ?>
+            404 - <?= __portfolio('Portfolio d’Eline Schmitz') ?>
+        <?php else: ?>
+            <?= get_the_title() ?> - <?= __portfolio('Portfolio d’Eline Schmitz') ?>
+        <?php endif; ?>
+    </title>
 </head>
 <body>
-<h1 class="sro"><?= get_the_title(); ?></h1>
+<h1 class="sro">
+    <?php if (is_404()): ?>
+        404
+    <?php else: ?>
+        <?= get_the_title() ?>
+    <?php endif; ?>
+</h1>
 
 <header class="header">
     <a class="header__home-link" href="<?= home_url(); ?>"
