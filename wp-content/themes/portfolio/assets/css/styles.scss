@@ -13,9 +13,11 @@
 @use 'general/components/action-button';
 @use 'general/components/image-container';
 @use 'general/components/creations-section';
+@use 'general/components/contact-details';
 
 @use 'general/content/home/hero';
 @use 'general/content/creations/creations';
 @use 'general/content/single-creation/single-creation';
 @use 'general/content/universe/universe';
+@use 'general/content/contact/contact';
 @use 'general/content/not-found/not-found';

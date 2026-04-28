@@ -1,0 +1,254 @@
+@use '../../../settings/variables/breakpoints';
+
+// mobile first
+
+.contact {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 4rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
+
+.contact-details__title,
+.form__title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  color: var(--beige);
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 2rem;
+    background-color: var(--dark);
+  }
+}
+
+.form {
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__name-wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    color: var(--beige);
+  }
+
+  &__input,
+  &__message {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--beige);
+    border: none;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    color: var(--burgundy);
+  }
+
+  &__message {
+    resize: none;
+  }
+
+  &__input:focus,
+  &__message:focus {
+    outline: 0.4rem solid var(--pink);
+    outline-offset: -0.4rem;
+  }
+
+  &__action {
+    width: fit-content;
+    margin-top: 4rem;
+  }
+
+  &__action:focus {
+    outline: none;
+  }
+}
+
+.form__input,
+::placeholder {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+.required-field {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.required-field::after {
+  content: '';
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  mask-image: url('/wp-content/themes/portfolio/assets/svg/star.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: var(--pink);
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .contact {
+    &__title {
+      font-size: 3.6rem;
+      margin-bottom: 5.4rem;
+    }
+
+    &__wrapper {
+      gap: 10rem;
+    }
+  }
+
+  .contact-details__title,
+  .form__title {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-details {
+    &__wrapper {
+      gap: 1.6rem;
+      padding: 1.6rem 3rem;
+    }
+  }
+
+  .form {
+    &__fields,
+    &__name-wrapper {
+      gap: 3rem;
+    }
+
+    &__group {
+      gap: 1.6rem;
+    }
+
+    &__input,
+    &__message {
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    &__action {
+      margin-top: 5.4rem;
+    }
+  }
+
+  .form__label,
+  .form__input,
+  ::placeholder {
+    font-size: 1.6rem;
+  }
+
+  .required-field {
+    gap: 1rem;
+  }
+
+  .required-field::after {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .contact {
+    &__wrapper {
+      flex-direction: row;
+      gap: 12rem;
+    }
+
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 6rem;
+    }
+  }
+
+  .contact-details__title,
+  .form__title {
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .contact-details {
+    &__wrapper {
+      gap: 2rem;
+      padding: 2rem 4rem;
+    }
+  }
+
+  .form {
+    &__fields,
+    &__name-wrapper {
+      gap: 4rem;
+    }
+
+    &__group {
+      gap: 2rem;
+    }
+
+    &__input,
+    &__message {
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+    }
+
+    &__action {
+      margin-top: 6rem;
+    }
+  }
+
+  .form__label,
+  .form__input,
+  ::placeholder {
+    font-size: 1.8rem;
+  }
+
+  .required-field {
+    gap: 1.2rem;
+  }
+
+  .required-field::after {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
