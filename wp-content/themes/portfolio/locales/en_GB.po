@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/portfolio\n"
-"POT-Creation-Date: 2026-04-24 11:06+0200\n"
-"PO-Revision-Date: 2026-04-24 11:07+0200\n"
+"POT-Creation-Date: 2026-04-28 15:12+0200\n"
+"PO-Revision-Date: 2026-04-28 17:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -87,6 +87,14 @@ msgstr "Sorry, no pages match your criteria."
 msgid "Mes autres créations"
 msgstr "My other creations"
 
+#: templates/components/contact-details.php:20
+msgid "Envoyer un email à Eline Schmitz"
+msgstr "Send an email to Eline Schmitz"
+
+#: templates/components/contact-details.php:30
+msgid "Appeler Eline Schmitz"
+msgstr "Call Eline Schmitz"
+
 #: templates/content/creations/filters.php:34
 msgid "Afficher les créations web"
 msgstr "Display the web creations"
@@ -123,6 +131,68 @@ msgstr "Get in touch"
 #: templates/content/universe/journey.php:45
 msgid "Mon CV en PDF"
 msgstr "My CV in PDF"
+
+#~ msgid "L’adresse email que vous avez entré n’est pas valide."
+#~ msgstr "The email address you entered is not valid."
+
+#~ msgid "Le prénom est requis."
+#~ msgstr "The first name is required."
+
+#~ msgid "Le nom est requis."
+#~ msgstr "The last name is required."
+
+#~ msgid "L’adresse email est requise."
+#~ msgstr "The email address is required."
+
+#~ msgid "Réponse à votre message sur le portfolio d’Eline Schmitz"
+#~ msgstr "Reply to your message on Eline Schmitz's portfolio"
+
+#~ msgid "Prénom"
+#~ msgstr "First name"
+
+#~ msgid "Jean"
+#~ msgstr "John"
+
+#~ msgid "Nom"
+#~ msgstr "Last name"
+
+#~ msgid "Valjean"
+#~ msgstr "Doe"
+
+#~ msgid "Adresse email"
+#~ msgstr "Email address"
+
+#~ msgid "jean.valjean@gmail.com"
+#~ msgstr "john.doe@hotmail.co.uk"
+
+#~ msgid "Sujet"
+#~ msgstr "Subject"
+
+#~ msgid "Offre d’emploi"
+#~ msgstr "Job opportunity"
+
+#~ msgid "Écrivez votre message ici."
+#~ msgstr "Write your message here."
+
+#~ msgid "Envoyer"
+#~ msgstr "Submit"
+
+#~ msgid "Attention, le formulaire contient des erreurs."
+#~ msgstr "Watch out, there are errors in the form."
+
+#~ msgid ""
+#~ "Merci pour votre message, vous recevrez une réponse dès que possible !"
+#~ msgstr ""
+#~ "Thank you for your message, you will receive a reply as soon as possible!"
+
+#~ msgid "Veuillez fournir une adresse e-mail valide."
+#~ msgstr "Please enter a valid email address."
+
+#~ msgid "Le champ "
+#~ msgstr "The field "
+
+#~ msgid "mes-creations"
+#~ msgstr "my-creations"
 
 #~ msgid "Voir la création : "
 #~ msgstr "Have a look to the creation: "

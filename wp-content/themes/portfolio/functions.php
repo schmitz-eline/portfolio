@@ -118,6 +118,63 @@ add_filter('template_include', function ($template) {
     return $template;
 }, 99);
 
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+register_post_type('message', [
+    'label' => 'Messages',
+    'description' => 'Les messages du formulaire de contact',
+    'menu_position' => 34,
+    'public' => false,
+    'show_ui' => true,
+    'menu_icon' => 'dashicons-testimonial',
+    'supports' => array('title', 'editor')
+]);
+
+function eline_save_cf7_message(): void
+{
+    $submission = WPCF7_Submission::get_instance();
+    if (!$submission) {
+        return;
+    }
+
+    $data = $submission->get_posted_data();
+
+    $prenom = $data['first-name'] ?? '';
+    $nom = $data['last-name'] ?? '';
+    $email = $data['email'] ?? '';
+    $subject = $data['subject'] ?? '';
+    $message = $data['message'] ?? '';
+
+    $post_id = wp_insert_post([
+        'post_type' => 'message',
+        'post_title' => trim("$prenom $nom <$email> - $subject"),
+        'post_content' => $message,
+        'post_status' => 'publish'
+    ]);
+
+    if ($post_id) {
+        update_post_meta($post_id, 'email', $email);
+    }
+}
+
+add_action('wpcf7_mail_sent', 'eline_save_cf7_message');
+add_action('wpcf7_before_send_mail', 'eline_save_cf7_message'); // pour faire des tests en local
+
+function eline_reply_button($post): void
+{
+    if ($post->post_type !== 'message') {
+        return;
+    }
+
+    $email = get_post_meta($post->ID, 'email', true);
+    if (!$email) {
+        return;
+    }
+
+    echo '<a href="mailto:' . esc_attr($email) . '" class="button button-primary">Répondre</a>';
+}
+add_action('edit_form_after_title', 'eline_reply_button');
+
 
 // préférences d'affichage dans l'admin
 

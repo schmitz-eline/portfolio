@@ -1,0 +1,29 @@
+@use '../../settings/variables/breakpoints';
+
+// mobile first
+
+.contact-details__item {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--beige);
+
+  &-link {
+    color: var(--beige);
+  }
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .contact-details__item {
+    font-size: 1.6rem;
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .contact-details__item {
+    font-size: 1.8rem;
+  }
+}
