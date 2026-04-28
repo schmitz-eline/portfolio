@@ -192,14 +192,14 @@
 
 @include breakpoints.desktop {
   .contact {
-    &__wrapper {
-      flex-direction: row;
-      gap: 12rem;
-    }
-
     &__title {
       font-size: 4rem;
       margin-bottom: 6rem;
+    }
+
+    &__wrapper {
+      flex-direction: row;
+      gap: 12rem;
     }
   }
 

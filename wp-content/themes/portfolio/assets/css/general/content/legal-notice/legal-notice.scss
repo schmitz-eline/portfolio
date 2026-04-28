@@ -1,0 +1,149 @@
+@use '../../../settings/variables/breakpoints';
+
+// mobile first
+
+.legal-notice {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 950;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 4rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  &__contact,
+  &__int-prop,
+  &__hosting,
+  &__personal-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__contact__title,
+  &__int-prop__title,
+  &__hosting__title,
+  &__personal-data__title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--beige);
+  }
+
+  &__contact__wrapper,
+  &__hosting__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__int-prop__text,
+  &__hosting__text,
+  &__hosting__address,
+  &__personal-data__text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--beige);
+    max-width: 60ch;
+  }
+
+  &__hosting__text a {
+    color: var(--beige);
+    position: relative;
+    display: inline-block;
+    background-size: 100% 50%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--dark), var(--dark));
+  }
+}
+
+// tablette
+
+@include breakpoints.tablet {
+  .legal-notice {
+    &__title {
+      font-size: 3.6rem;
+      margin-bottom: 5.4rem;
+    }
+
+    &__wrapper {
+      gap: 10rem;
+    }
+
+    &__contact,
+    &__int-prop,
+    &__hosting,
+    &__personal-data {
+      gap: 3rem;
+    }
+
+    &__contact__title,
+    &__int-prop__title,
+    &__hosting__title,
+    &__personal-data__title {
+      font-size: 2.4rem;
+    }
+
+    &__contact__wrapper,
+    &__hosting__wrapper {
+      gap: 1.6rem;
+    }
+
+    &__int-prop__text,
+    &__hosting__text,
+    &__hosting__address,
+    &__personal-data__text {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// desktop
+
+@include breakpoints.desktop {
+  .legal-notice {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 6rem;
+    }
+
+    &__wrapper {
+      gap: 12rem;
+    }
+
+    &__contact,
+    &__int-prop,
+    &__hosting,
+    &__personal-data {
+      gap: 4rem;
+    }
+
+    &__contact__title,
+    &__int-prop__title,
+    &__hosting__title,
+    &__personal-data__title {
+      font-size: 2.8rem;
+    }
+
+    &__contact__wrapper,
+    &__hosting__wrapper {
+      gap: 2rem;
+    }
+
+    &__int-prop__text,
+    &__hosting__text,
+    &__hosting__address,
+    &__personal-data__text {
+      font-size: 1.8rem;
+    }
+  }
+}
