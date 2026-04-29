@@ -19,7 +19,7 @@ $image = get_field('universe_intro_image');
         <figure class="universe__intro__image-container image-container">
             <picture>
                 <source
-                        srcset="<?= get_template_directory_uri() ?>/assets/images/<?= $image['filename']; ?>.webp"
+                        srcset="<?= wp_get_attachment_image_url($image['id'], 'eline-square-medium', ['format' => 'webp']); ?>"
                         type="image/webp">
 
                 <?= wp_get_attachment_image(
