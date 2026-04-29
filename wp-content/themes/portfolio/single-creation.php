@@ -51,7 +51,7 @@ $content = get_field('tm_content');
                                 <figure class="single-creation__image-container image-container">
                                     <picture>
                                         <source
-                                                srcset="<?= wp_get_attachment_image_url($image['id'], 'eline-medium', ['format' => 'webp']); ?>"
+                                                srcset="<?= get_template_directory_uri() ?>/assets/images/<?= pathinfo($image['filename'], PATHINFO_FILENAME) ?>.webp"
                                                 type="image/webp">
 
                                         <?= wp_get_attachment_image(
