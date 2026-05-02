@@ -17,7 +17,8 @@ $personal_data_text = get_field('personal_data_text');
         <h2 class="legal-notice__title"><?= get_the_title(); ?></h2>
 
         <div class="legal-notice__wrapper">
-            <article class="legal-notice__contact">
+            <article class="legal-notice__contact" itemscope itemtype="https://schema.org/Person">
+                <meta itemprop="name" content="Eline Schmitz">
                 <?php if ($details_title): ?>
                     <h3 class="legal-notice__contact__title"><?= esc_html($details_title) ?></h3>
                 <?php endif; ?>

@@ -4,7 +4,7 @@ $currentLanguage = pll_current_language();
 ?>
 
 <!doctype html>
-<html lang="<?= $currentLanguage ?>">
+<html lang="<?= $currentLanguage ?>" itemscope itemtype="https://schema.org/WebSite">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -15,6 +15,17 @@ $currentLanguage = pll_current_language();
           content="Eline Schmitz, portfolio, <?= __portfolio('design web, développement web, brutalisme, minimalisme') ?>">
     <meta name="description"
           content="<?= __portfolio('Portfolio d’Eline Schmitz, étudiante en Infographie. Découvrez mes créations et mon univers.') ?>">
+
+    <!-- Microdata WebSite -->
+    <meta itemprop="url" content="<?= home_url(); ?>">
+    <meta itemprop="name" content="Portfolio d’Eline Schmitz">
+
+    <!-- Microdata WebPage -->
+    <meta itemprop="name" content="<?= get_the_title(); ?>">
+    <meta itemprop="description"
+          content="<?= __portfolio('Portfolio d’Eline Schmitz, étudiante en Infographie. Découvrez mes créations et mon univers.') ?>">
+    <link itemprop="url" href="<?= get_permalink(); ?>">
+
     <link rel="canonical" href="<?= get_permalink(); ?>">
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css') ?>">
     <script defer type="module" src="<?= portfolio_asset('js') ?>"></script>
@@ -35,7 +46,7 @@ $currentLanguage = pll_current_language();
     <?php endif; ?>
 </h1>
 
-<header class="header">
+<header class="header" itemscope itemtype="https://schema.org/WPHeader">
     <a class="header__home-link" href="<?= home_url(); ?>"
        title="<?= __portfolio('Vers la page d’accueil') ?>">
         Eline Schmitz
@@ -54,7 +65,8 @@ $currentLanguage = pll_current_language();
             </svg>
         </button>
 
-        <nav class="header__nav" role="navigation" id="header-nav">
+        <nav class="header__nav" role="navigation" id="header-nav" itemscope
+             itemtype="https://schema.org/SiteNavigationElement">
             <h2 class="header__nav-title sro"><?= __portfolio('Navigation de l’en-tête de page') ?></h2>
 
             <ul class="header__nav-list">
@@ -69,7 +81,7 @@ $currentLanguage = pll_current_language();
                 </li>
 
                 <?php foreach (portfolio_get_navigation_links('header') as $link) : ?>
-                    <li class="header__nav-item">
+                    <li class="header__nav-item" itemprop="name">
                         <?php
                         $currentPage = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
                         $link_path = parse_url($link->href, PHP_URL_PATH);
@@ -77,7 +89,9 @@ $currentLanguage = pll_current_language();
 
                         <a class="header__nav-link <?= ($currentPage === $link_path) ? 'active' : '' ?>"
                            href="<?= $link->href ?>"
-                           title="<?= $link->title ?>" <?= ($currentPage === $link_path) ? 'aria-current="page"' : '' ?>>
+                           title="<?= $link->title ?>"
+                           itemprop="url"
+                                <?= ($currentPage === $link_path) ? 'aria-current="page"' : '' ?>>
                             <span><?= $link->label ?></span>
                         </a>
                     </li>
@@ -88,7 +102,8 @@ $currentLanguage = pll_current_language();
                 <?php foreach ($languages as $lang): ?>
                     <?php if ($lang['slug'] !== $currentLanguage): ?>
                         <a class="header__lang-link" href="<?= $lang['url'] ?>"
-                           title="<?= __portfolio('Traduire en anglais') ?>">
+                           title="<?= __portfolio('Traduire en anglais') ?>"
+                           itemprop="url">
                             <?= strtoupper($lang['slug']) ?>
                         </a>
                     <?php endif; ?>
@@ -98,4 +113,4 @@ $currentLanguage = pll_current_language();
     </div>
 </header>
 
-<main>
+<main itemscope itemtype="https://schema.org/WebPage">

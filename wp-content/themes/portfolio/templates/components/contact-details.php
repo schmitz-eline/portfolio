@@ -19,7 +19,8 @@ $reformated_phone = preg_replace('/(\+352)(\d{3})(\d{3})(\d{3})/', '$1 $2 $3 $4'
            href="mailto:<?= $email ?>"
            title="<?= esc_attr(__portfolio('Envoyer un email à Eline Schmitz')) ?>"
            target="_blank"
-           rel="noopener noreferrer">
+           rel="noopener noreferrer"
+           itemprop="email">
             <?= esc_html($email) ?>
         </a>
     </li>
@@ -31,14 +32,15 @@ $reformated_phone = preg_replace('/(\+352)(\d{3})(\d{3})(\d{3})/', '$1 $2 $3 $4'
            href="tel:<?= $phone ?>"
            title="<?= esc_attr(__portfolio('Appeler Eline Schmitz')) ?>"
            target="_blank"
-           rel="noopener noreferrer">
+           rel="noopener noreferrer"
+           itemprop="telephone">
             <?= esc_html($reformated_phone) ?>
         </a>
     </li>
 <?php endif; ?>
 
 <?php if ($address): ?>
-    <li class="contact-details__item">
+    <li class="contact-details__item" itemprop="address">
         <?= esc_html($address) ?>
     </li>
 <?php endif; ?>

@@ -10,7 +10,7 @@ $hobbies_title = get_field('universe_hobbies_title');
     <?php endif; ?>
 
     <?php if ($strengths_text): ?>
-        <p class="universe__strengths__text"><?= esc_html($strengths_text) ?></p>
+        <p class="universe__strengths__text" itemprop="knowsAbout"><?= esc_html($strengths_text) ?></p>
     <?php endif; ?>
 </article>
 
@@ -27,7 +27,7 @@ $hobbies_title = get_field('universe_hobbies_title');
             ?>
             <?php if ($text && $image): ?>
                 <div class="universe__hobbies__text-media">
-                    <p class="universe__hobbies__text"><?= esc_html($text) ?></p>
+                    <p class="universe__hobbies__text" itemprop="knowsAbout"><?= esc_html($text) ?></p>
                     <figure class="universe__hobbies__image-container image-container">
                         <picture>
                             <source
@@ -48,7 +48,7 @@ $hobbies_title = get_field('universe_hobbies_title');
                     </figure>
                 </div>
             <?php elseif ($text): ?>
-                <p class="universe__hobbies__text"><?= esc_html($text) ?></p>
+                <p class="universe__hobbies__text" itemprop="knowsAbout"><?= esc_html($text) ?></p>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>

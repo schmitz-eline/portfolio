@@ -42,7 +42,8 @@ $aria_labels = [
         <li class="creations__filter active-filter" data-filter="all">
             <a class="creations__filter-link"
                href="<?= esc_url($creations_url); ?>"
-               aria-label="<?= esc_attr(__portfolio('Afficher toutes les créations')); ?>">
+               aria-label="<?= esc_attr(__portfolio('Afficher toutes les créations')); ?>"
+               itemprop="url">
                 <span><?= esc_html(__portfolio('Toutes')); ?></span>
             </a>
         </li>
@@ -58,7 +59,8 @@ $aria_labels = [
             <li class="creations__filter" data-filter="<?= esc_attr($normalized_slug); ?>">
                 <a class="creations__filter-link"
                    href="<?= esc_url($filter_url); ?>"
-                   aria-label="<?= esc_attr($aria_label); ?>">
+                   aria-label="<?= esc_attr($aria_label); ?>"
+                   itemprop="url">
                     <span><?= esc_html($type->name); ?></span>
                 </a>
             </li>

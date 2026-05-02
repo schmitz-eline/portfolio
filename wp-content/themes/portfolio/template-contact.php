@@ -8,11 +8,12 @@ $code = get_field('contact_form_shortcode');
 
 <?php get_header(); ?>
 
-<section class="contact">
+<section class="contact" itemscope itemtype="https://schema.org/ContactPage">
     <h2 class="contact__title"><?= get_the_title(); ?></h2>
 
     <div class="contact__wrapper">
-        <section class="contact-details">
+        <section class="contact-details" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="Eline Schmitz">
             <?php if ($details_title): ?>
                 <h3 class="contact-details__title"><?= esc_html($details_title) ?></h3>
             <?php endif; ?>
