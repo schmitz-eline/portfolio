@@ -31,7 +31,7 @@ $hobbies_title = get_field('universe_hobbies_title');
                     <figure class="universe__hobbies__image-container image-container">
                         <picture>
                             <source
-                                    srcset="<?= wp_get_attachment_image_url($image['id'], 'eline-square-medium', ['format' => 'webp']); ?>"
+                                    srcset="<?= get_template_directory_uri() ?>/assets/images/<?= pathinfo($image['filename'], PATHINFO_FILENAME) ?>.webp"
                                     type="image/webp">
 
                             <?= wp_get_attachment_image(
