@@ -22,27 +22,29 @@ $content = get_field('tm_content');
 
                     <article class="single-creation__part">
                         <div class="single-creation__content">
-                            <?php
-                            $part_title = get_sub_field('tm_part_title');
-                            ?>
-                            <?php if ($part_title): ?>
-                                <h3 class="single-creation__part-title"><?= esc_html($part_title) ?></h3>
-                            <?php endif; ?>
+                            <div class="single-creation__text-wrapper">
+                                <?php
+                                $part_title = get_sub_field('tm_part_title');
+                                ?>
+                                <?php if ($part_title): ?>
+                                    <h3 class="single-creation__part-title"><?= esc_html($part_title) ?></h3>
+                                <?php endif; ?>
 
-                            <?php if (have_rows('tm_paragraphs')): ?>
-                                <div class="single-creation__paragraphs">
-                                    <?php while (have_rows('tm_paragraphs')): the_row() ?>
-                                        <?php
-                                        $paragraph = get_sub_field('tm_paragraph');
-                                        ?>
-                                        <?php if ($paragraph): ?>
-                                            <div class="single-creation__text">
-                                                <?= wp_kses_post($paragraph) ?>
-                                            </div>
-                                        <?php endif; ?>
-                                    <?php endwhile; ?>
-                                </div>
-                            <?php endif; ?>
+                                <?php if (have_rows('tm_paragraphs')): ?>
+                                    <div class="single-creation__paragraphs">
+                                        <?php while (have_rows('tm_paragraphs')): the_row() ?>
+                                            <?php
+                                            $paragraph = get_sub_field('tm_paragraph');
+                                            ?>
+                                            <?php if ($paragraph): ?>
+                                                <div class="single-creation__text">
+                                                    <?= wp_kses_post($paragraph) ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php endwhile; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
 
                             <?php
                             $image = get_sub_field('tm_image');
