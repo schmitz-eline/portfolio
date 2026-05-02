@@ -5,7 +5,7 @@ $download_icon = get_field('universe_download_icon');
 $contact_link = get_field('universe_contact_link');
 ?>
 
-<article class="universe__article universe__journey">
+<article class="universe__article universe__journey" itemprop="description">
     <?php if ($title): ?>
         <h3 class="universe__journey__title"><?= esc_html($title) ?></h3>
     <?php endif; ?>

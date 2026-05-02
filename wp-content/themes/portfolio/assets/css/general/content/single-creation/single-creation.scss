@@ -21,6 +21,7 @@
     display: flex;
     gap: 1.2rem;
     align-items: center;
+    width: fit-content;
 
     &::before {
       content: '';
@@ -202,6 +203,7 @@
     }
 
     &__actions {
+      gap: 4rem;
       margin-top: -5.28rem; // = - leur hauteur
     }
 

@@ -5,8 +5,8 @@ $content = get_field('tm_content');
 
 <?php get_header(); ?>
 
-    <section class="single-creation">
-        <h2 class="single-creation__title"><?= get_the_title(); ?></h2>
+    <section class="single-creation" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="single-creation__title" itemprop="name"><?= get_the_title(); ?></h2>
 
         <?php if ($back_link): ?>
             <a class="single-creation__back-link"
@@ -20,7 +20,7 @@ $content = get_field('tm_content');
             <?php while (have_rows('tm_content')): the_row() ?>
                 <?php if (get_row_layout() === 'tm_part'): ?>
 
-                    <article class="single-creation__part">
+                    <article class="single-creation__part" itemprop="description">
                         <div class="single-creation__content">
                             <div class="single-creation__text-wrapper">
                                 <?php
@@ -63,7 +63,8 @@ $content = get_field('tm_content');
                                                 [
                                                         'class' => 'single-creation__image',
                                                         'loading' => 'lazy',
-                                                        'sizes' => '(min-width: 1024px) 700px, 74vw'
+                                                        'sizes' => '(min-width: 1024px) 700px, 74vw',
+                                                        'itemprop' => 'image'
                                                 ]
                                         ) ?>
                                     </picture>
@@ -86,7 +87,8 @@ $content = get_field('tm_content');
                                                hreflang="fr"
                                                title="<?= esc_attr($link['title']) ?>"
                                                target="<?= esc_attr($link['target']) ?>"
-                                               rel="noopener noreferrer">
+                                               rel="noopener noreferrer"
+                                               itemprop="url">
                                                 <span><?= esc_html($link_label) ?></span>
                                                 <?php if ($link_icon): ?>
                                                     <img src="<?= esc_url($link_icon['url']) ?>"

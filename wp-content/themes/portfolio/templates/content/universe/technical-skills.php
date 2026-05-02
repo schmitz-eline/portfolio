@@ -10,7 +10,7 @@ $title = get_field('universe_tec_skills_title');
     <?php if (have_rows('universe_tec_skills_items')): ?>
         <ul class="universe__tec-skills__list">
             <?php while (have_rows('universe_tec_skills_items')) : the_row() ?>
-                <li class="universe__tec-skills__item">
+                <li class="universe__tec-skills__item" itemprop="knowsAbout">
                     <?php
                     $image = get_sub_field('universe_tec_skills_image');
                     $name = get_sub_field('universe_tec_skills_name');

@@ -6,10 +6,10 @@ $contact_link = get_field('hero_contact_link');
 ?>
 
 <section class="hero">
-    <h2 class="hero__title sro">Introduction</h2>
+    <h2 class="hero__title sro" itemprop="headline">Introduction</h2>
 
     <?php if (!empty($text)): ?>
-        <p class="hero__intro"><?= esc_html($text); ?></p>
+        <p class="hero__intro" itemprop="description"><?= esc_html($text); ?></p>
     <?php endif; ?>
 
     <?php if (!empty($words)): ?>
@@ -31,7 +31,8 @@ $contact_link = get_field('hero_contact_link');
             <li class="hero__action">
                 <a class="hero__link action"
                    href="<?= esc_url($universe_link['url']); ?>"
-                   title="<?= esc_attr($universe_link['title']); ?>">
+                   title="<?= esc_attr($universe_link['title']); ?>"
+                   itemprop="url">
                     <span><?= esc_html(__portfolio('Mon univers')); ?></span>
                 </a>
             </li>
@@ -41,7 +42,8 @@ $contact_link = get_field('hero_contact_link');
             <li class="hero__action">
                 <a class="hero__link action"
                    href="<?= esc_url($contact_link['url']); ?>"
-                   title="<?= esc_attr($contact_link['title']); ?>">
+                   title="<?= esc_attr($contact_link['title']); ?>"
+                   itemprop="url">
                     <span><?= esc_html(__portfolio('Me contacter')); ?></span>
                 </a>
             </li>

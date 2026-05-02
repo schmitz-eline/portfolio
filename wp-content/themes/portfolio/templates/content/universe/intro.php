@@ -4,14 +4,15 @@ $text = get_field('universe_intro_text');
 $image = get_field('universe_intro_image');
 ?>
 
-<article class="universe__article universe__intro">
+<article class="universe__article universe__intro" itemscope itemtype="https://schema.org/Person">
+    <meta itemprop="name" content="Eline Schmitz">
     <div class="universe__intro__wrapper">
         <?php if ($title): ?>
             <h3 class="universe__intro__title"><?= esc_html($title) ?></h3>
         <?php endif; ?>
 
         <?php if ($text): ?>
-            <p class="universe__intro__text"><?= esc_html($text) ?></p>
+            <p class="universe__intro__text" itemprop="description"><?= esc_html($text) ?></p>
         <?php endif; ?>
     </div>
 
@@ -29,7 +30,8 @@ $image = get_field('universe_intro_image');
                         [
                                 'class' => 'universe__intro__image',
                                 'loading' => 'lazy',
-                                'sizes' => '(min-width: 1024px) 20vw, (min-width: 800px) 54vw, 64vw'
+                                'sizes' => '(min-width: 1024px) 20vw, (min-width: 800px) 54vw, 64vw',
+                                'itemprop' => 'image'
                         ]
                 ) ?>
             </picture>

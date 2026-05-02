@@ -6,7 +6,7 @@ $link = get_field('cs_link');
 
 <section class="creations-section">
     <?php if (!empty($title)): ?>
-        <h2 class="creations-section__title"><?= esc_html($title) ?></h2>
+        <h2 class="creations-section__title" itemprop="headline"><?= esc_html($title) ?></h2>
     <?php endif; ?>
 
     <?php if (!empty($items)): ?>
@@ -24,17 +24,19 @@ $link = get_field('cs_link');
                 <article class="creations-section__item">
                     <a class="creations-section__item-link"
                        href="<?= esc_url($link_url['url']); ?>"
-                       title="<?= esc_attr($link_url['title']); ?>">
+                       title="<?= esc_attr($link_url['title']); ?>"
+                       itemprop="url">
 
                         <figure class="creations-section__item-image-container image-container">
                             <?php if (!empty($image)): ?>
                                 <img class="creations-section__item-image"
                                      src="<?= esc_url($image['url']); ?>"
-                                     alt="<?= esc_attr($image['alt']); ?>">
+                                     alt="<?= esc_attr($image['alt']); ?>"
+                                     itemprop="image">
                             <?php endif; ?>
                         </figure>
 
-                        <h3 class="creations-section__item-name"><?= esc_html($name); ?></h3>
+                        <h3 class="creations-section__item-name" itemprop="name"><?= esc_html($name); ?></h3>
                     </a>
                 </article>
             <?php endforeach; ?>
@@ -44,7 +46,8 @@ $link = get_field('cs_link');
     <?php if (!empty($link)): ?>
         <a class="creations-section__link action"
            href="<?= esc_url($link['url']); ?>"
-           title="<?= esc_attr($link['title']); ?>">
+           title="<?= esc_attr($link['title']); ?>"
+           itemprop="url">
             <span><?= esc_html(__portfolio('Plus de créations')); ?></span>
         </a>
     <?php endif; ?>

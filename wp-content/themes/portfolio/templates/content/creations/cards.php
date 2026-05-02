@@ -26,7 +26,10 @@ $creations = new WP_Query($args);
 ?>
 
 <?php if ($creations->have_posts()): ?>
-    <div class="creations__cards">
+    <div class="creations__cards"
+         itemscope
+         itemtype="https://schema.org/ItemList"
+         itemprop="mainEntity">
         <?php while ($creations->have_posts()): ?>
 
             <?php $creations->the_post(); ?>
@@ -46,18 +49,24 @@ $creations = new WP_Query($args);
             $link = get_field('creation_link');
             ?>
 
-            <article class="creations__card" data-type="<?= esc_attr($normalized_type) ?>">
+            <article class="creations__card"
+                     data-type="<?= esc_attr($normalized_type) ?>"
+                     itemprop="itemListElement"
+                     itemscope
+                     itemtype="https://schema.org/CreativeWork">
                 <a class="creations__card-link"
                    href="<?= esc_url($link['url']); ?>"
-                   title="<?= esc_attr($link['title']); ?>">
+                   title="<?= esc_attr($link['title']); ?>"
+                   itemprop="url">
                     <?php if (!empty($image)): ?>
                         <figure class="creations__image-container image-container">
                             <img class="creations__image"
                                  src="<?= esc_url($image['url']) ?>"
-                                 alt="<?= esc_attr($image['alt']); ?>">
+                                 alt="<?= esc_attr($image['alt']); ?>"
+                                 itemprop="image">
                         </figure>
                     <?php endif; ?>
-                    <h3 class="creations__name">
+                    <h3 class="creations__name" itemprop="name">
                         <?= esc_html(get_the_title()); ?>
                     </h3>
                 </a>

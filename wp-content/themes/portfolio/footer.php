@@ -5,8 +5,8 @@ $legal = portfolio_get_navigation_links('legal');
 ?>
 
 </main>
-<footer class="footer">
-    <nav class="footer__nav" aria-labelledby="footer-nav-title">
+<footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
+    <nav class="footer__nav" aria-labelledby="footer-nav-title" itemscope itemtype="https://schema.org/SiteNavigationElement">
         <h2 class="footer__title sro" id="footer-nav-title"><?= __portfolio('Navigation du pied de page') ?></h2>
 
         <ul class="footer__sections">
@@ -14,8 +14,8 @@ $legal = portfolio_get_navigation_links('legal');
                 <span class="footer__section-title">Navigation</span>
                 <ul class="footer__section-list" role="list">
                     <?php foreach ($footer as $link): ?>
-                        <li class="footer__section-item">
-                            <a class="footer__section-link" href="<?= $link->href ?>" title="<?= $link->title ?>">
+                        <li class="footer__section-item" itemprop="name">
+                            <a class="footer__section-link" href="<?= $link->href ?>" title="<?= $link->title ?>" itemprop="url">
                                 <?= $link->label ?>
                             </a>
                         </li>
@@ -27,8 +27,8 @@ $legal = portfolio_get_navigation_links('legal');
                 <span class="footer__section-title"><?= __portfolio('Me suivre') ?></span>
                 <ul class="footer__section-list" role="list">
                     <?php foreach ($socials as $link): ?>
-                        <li class="footer__section-item">
-                            <a class="footer__section-link" href="<?= $link->href ?>" title="<?= $link->title ?>" target="_blank" rel="noopener noreferrer">
+                        <li class="footer__section-item" itemprop="name">
+                            <a class="footer__section-link" href="<?= $link->href ?>" title="<?= $link->title ?>" target="_blank" rel="noopener noreferrer" itemprop="url">
                                 <?= $link->label ?>
                             </a>
                         </li>
@@ -41,7 +41,7 @@ $legal = portfolio_get_navigation_links('legal');
     <div class="footer__bottom">
         <div class="footer__bottom-wrapper">
             <p class="footer__copyright"><?= __portfolio('© Eline Schmitz 2026. Tous droits réservés.') ?></p>
-            <a class="footer__legal-link" href="<?= $legal[0]->href ?>" title="<?= $legal[0]->title ?>">
+            <a class="footer__legal-link" href="<?= $legal[0]->href ?>" title="<?= $legal[0]->title ?>" itemprop="url">
                 <?= $legal[0]->label ?>
             </a>
         </div>
