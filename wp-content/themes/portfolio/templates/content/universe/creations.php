@@ -26,13 +26,15 @@ $link = get_field('cs_link');
                        href="<?= esc_url($link_url['url']); ?>"
                        title="<?= esc_attr($link_url['title']); ?>">
 
-                        <figure class="creations-section__item-image-container image-container">
-                            <?php if (!empty($image)): ?>
-                                <img class="creations-section__item-image"
-                                     src="<?= esc_url($image['url']); ?>"
-                                     alt="<?= esc_attr($image['alt']); ?>">
-                            <?php endif; ?>
-                        </figure>
+                        <?php if (!empty($image)) : ?>
+                            <figure class="creations-section__item-image-container image-container">
+                                <div class="image-inner">
+                                    <img class="creations-section__item-image"
+                                         src="<?= esc_url($image['url']); ?>"
+                                         alt="<?= esc_attr($image['alt']); ?>">
+                                </div>
+                            </figure>
+                        <?php endif; ?>
 
                         <span class="creations-section__item-name"><?= esc_html($name); ?></span>
                     </a>

@@ -124,8 +124,11 @@
     --img-shadow: 0.4rem;
     --img-ratio: 1 / 1;
     --img-size: 20vw;
-    --img-padding: 1.2rem;
     min-width: 8rem;
+  }
+
+  .image-inner  {
+    --img-padding: 1.2rem;
   }
 
   &__tec-skills__name {
@@ -157,6 +160,11 @@
   &__hobbies__text + &__hobbies__text {
     margin-top: 2rem;
   }
+}
+
+.universe__tec-skills__item .image-container {
+  flex: 0 0 auto;
+  align-self: flex-start;
 }
 
 // tablette
@@ -236,6 +244,9 @@
     &__tec-skills__image-container {
       --img-shadow: 0.6rem;
       --img-size: 16vw;
+    }
+
+    .image-inner {
       --img-padding: 1.8rem;
     }
 
@@ -338,6 +349,9 @@
 
     &__tec-skills__image-container {
       --img-size: 10vw;
+    }
+
+    .image-inner {
       --img-padding: 2.4rem;
     }
 

@@ -123,6 +123,9 @@
     --img-shadow: 0.6rem;
     --img-ratio: 1 / 1;
     --img-size: 60vw;
+  }
+
+  .image-inner {
     --img-padding: 2rem;
   }
 
@@ -150,6 +153,11 @@
   }
 }
 
+.creations__card .image-container {
+  flex: 0 0 auto;
+  align-self: flex-start;
+}
+
 // tablette
 
 @include breakpoints.tablet {
@@ -173,6 +181,9 @@
     &__image-container {
       --img-shadow: 0.9rem;
       --img-size: 50vw;
+    }
+
+    .image-inner {
       --img-padding: 3rem;
     }
 

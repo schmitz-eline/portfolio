@@ -17,9 +17,11 @@ $title = get_field('universe_tec_skills_title');
                     ?>
                     <?php if ($image): ?>
                         <figure class="universe__tec-skills__image-container image-container">
-                            <img class="universe__tec-skills__image"
-                                 src="<?= esc_url($image['url']) ?>"
-                                 alt="<?= esc_attr($image['alt']) ?>">
+                            <div class="image-inner">
+                                <img class="universe__tec-skills__image"
+                                     src="<?= esc_url($image['url']) ?>"
+                                     alt="<?= esc_attr($image['alt']) ?>">
+                            </div>
                         </figure>
                     <?php endif; ?>
 

@@ -1,21 +1,28 @@
 .image-container {
+  aspect-ratio: var(--img-ratio);
+  width: var(--img-size);
+  border-radius: var(--img-border-radius);
+  border: 0.24rem solid var(--dark);
+  box-shadow: var(--dark) var(--img-shadow) var(--img-shadow);
+  background-color: var(--pink);
   box-sizing: border-box;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.image-inner {
+  padding: var(--img-padding);
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: var(--pink);
-  border: 0.24rem solid var(--dark);
-  border-radius: var(--img-border-radius);
-  box-shadow: var(--dark) var(--img-shadow) var(--img-shadow);
-  aspect-ratio: var(--img-ratio);
-  width: var(--img-size);
-  padding: var(--img-padding);
+  box-sizing: border-box;
 }
 
 .image-container img {
-  display: block;
-  object-fit: contain;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }

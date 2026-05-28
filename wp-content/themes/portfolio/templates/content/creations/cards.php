@@ -60,10 +60,12 @@ $creations = new WP_Query($args);
                    itemprop="url">
                     <?php if (!empty($image)): ?>
                         <figure class="creations__image-container image-container">
-                            <img class="creations__image"
-                                 src="<?= esc_url($image['url']) ?>"
-                                 alt="<?= esc_attr($image['alt']); ?>"
-                                 itemprop="image">
+                            <div class="image-inner">
+                                <img class="creations__image"
+                                     src="<?= esc_url($image['url']) ?>"
+                                     alt="<?= esc_attr($image['alt']); ?>"
+                                     itemprop="image">
+                            </div>
                         </figure>
                     <?php endif; ?>
                     <h3 class="creations__name" itemprop="name">
